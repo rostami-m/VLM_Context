@@ -1,0 +1,10 @@
+{
+  "family": "inject",
+  "model_id": "Qwen/Qwen2-VL-2B-Instruct",
+  "tasks": ["shapes4", "cifar4"],
+  "seeds": [0, 1, 2],
+  "reader_checkpoints": {
+    "connector_episode_remap": "runs/q05/shapes4/connector_episode_remap/seed_{seed}/checkpoint",
+    "uncapped_all_episode_remap": "runs/q05/shapes4/uncapped_all_episode_remap/seed_{seed}/checkpoint"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "family": "classification",
+  "study": "q05",
+  "task": "shapes4",
+  "arm": "frozen"
+}

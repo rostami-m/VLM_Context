@@ -1,0 +1,45 @@
+model,task,condition,K,representative_total_tokens,visual_token_positions,visual_positions_per_image,precision,scope,prompt_file
+Qwen2-VL-2B,cifar4,standard,0,62,16,16,float32 (BF16-loaded base values upcast),one saved seed-0 episode per task/condition/K,prompts/Qwen2-VL-2B_cifar4_standard_K0.json
+Qwen2-VL-2B,cifar4,episode_remap,0,66,16,16,float32 (BF16-loaded base values upcast),one saved seed-0 episode per task/condition/K,prompts/Qwen2-VL-2B_cifar4_episode_remap_K0.json
+Qwen2-VL-2B,cifar4,standard,1,86,32,16,float32 (BF16-loaded base values upcast),one saved seed-0 episode per task/condition/K,prompts/Qwen2-VL-2B_cifar4_standard_K1.json
+Qwen2-VL-2B,cifar4,episode_remap,1,92,32,16,float32 (BF16-loaded base values upcast),one saved seed-0 episode per task/condition/K,prompts/Qwen2-VL-2B_cifar4_episode_remap_K1.json
+Qwen2-VL-2B,cifar4,standard,2,110,48,16,float32 (BF16-loaded base values upcast),one saved seed-0 episode per task/condition/K,prompts/Qwen2-VL-2B_cifar4_standard_K2.json
+Qwen2-VL-2B,cifar4,episode_remap,2,116,48,16,float32 (BF16-loaded base values upcast),one saved seed-0 episode per task/condition/K,prompts/Qwen2-VL-2B_cifar4_episode_remap_K2.json
+Qwen2-VL-2B,cifar4,standard,4,158,80,16,float32 (BF16-loaded base values upcast),one saved seed-0 episode per task/condition/K,prompts/Qwen2-VL-2B_cifar4_standard_K4.json
+Qwen2-VL-2B,cifar4,episode_remap,4,167,80,16,float32 (BF16-loaded base values upcast),one saved seed-0 episode per task/condition/K,prompts/Qwen2-VL-2B_cifar4_episode_remap_K4.json
+Qwen2-VL-2B,cifar4,standard,8,254,144,16,float32 (BF16-loaded base values upcast),one saved seed-0 episode per task/condition/K,prompts/Qwen2-VL-2B_cifar4_standard_K8.json
+Qwen2-VL-2B,cifar4,episode_remap,8,268,144,16,float32 (BF16-loaded base values upcast),one saved seed-0 episode per task/condition/K,prompts/Qwen2-VL-2B_cifar4_episode_remap_K8.json
+Qwen2-VL-2B,cifar4,standard,16,446,272,16,float32 (BF16-loaded base values upcast),one saved seed-0 episode per task/condition/K,prompts/Qwen2-VL-2B_cifar4_standard_K16.json
+Qwen2-VL-2B,cifar4,episode_remap,16,470,272,16,float32 (BF16-loaded base values upcast),one saved seed-0 episode per task/condition/K,prompts/Qwen2-VL-2B_cifar4_episode_remap_K16.json
+Qwen2-VL-2B,shapes4,standard,0,61,16,16,float32 (BF16-loaded base values upcast),one saved seed-0 episode per task/condition/K,prompts/Qwen2-VL-2B_shapes4_standard_K0.json
+Qwen2-VL-2B,shapes4,episode_remap,0,66,16,16,float32 (BF16-loaded base values upcast),one saved seed-0 episode per task/condition/K,prompts/Qwen2-VL-2B_shapes4_episode_remap_K0.json
+Qwen2-VL-2B,shapes4,standard,1,85,32,16,float32 (BF16-loaded base values upcast),one saved seed-0 episode per task/condition/K,prompts/Qwen2-VL-2B_shapes4_standard_K1.json
+Qwen2-VL-2B,shapes4,episode_remap,1,91,32,16,float32 (BF16-loaded base values upcast),one saved seed-0 episode per task/condition/K,prompts/Qwen2-VL-2B_shapes4_episode_remap_K1.json
+Qwen2-VL-2B,shapes4,standard,2,109,48,16,float32 (BF16-loaded base values upcast),one saved seed-0 episode per task/condition/K,prompts/Qwen2-VL-2B_shapes4_standard_K2.json
+Qwen2-VL-2B,shapes4,episode_remap,2,117,48,16,float32 (BF16-loaded base values upcast),one saved seed-0 episode per task/condition/K,prompts/Qwen2-VL-2B_shapes4_episode_remap_K2.json
+Qwen2-VL-2B,shapes4,standard,4,157,80,16,float32 (BF16-loaded base values upcast),one saved seed-0 episode per task/condition/K,prompts/Qwen2-VL-2B_shapes4_standard_K4.json
+Qwen2-VL-2B,shapes4,episode_remap,4,167,80,16,float32 (BF16-loaded base values upcast),one saved seed-0 episode per task/condition/K,prompts/Qwen2-VL-2B_shapes4_episode_remap_K4.json
+Qwen2-VL-2B,shapes4,standard,8,253,144,16,float32 (BF16-loaded base values upcast),one saved seed-0 episode per task/condition/K,prompts/Qwen2-VL-2B_shapes4_standard_K8.json
+Qwen2-VL-2B,shapes4,episode_remap,8,268,144,16,float32 (BF16-loaded base values upcast),one saved seed-0 episode per task/condition/K,prompts/Qwen2-VL-2B_shapes4_episode_remap_K8.json
+Qwen2-VL-2B,shapes4,standard,16,445,272,16,float32 (BF16-loaded base values upcast),one saved seed-0 episode per task/condition/K,prompts/Qwen2-VL-2B_shapes4_standard_K16.json
+Qwen2-VL-2B,shapes4,episode_remap,16,470,272,16,float32 (BF16-loaded base values upcast),one saved seed-0 episode per task/condition/K,prompts/Qwen2-VL-2B_shapes4_episode_remap_K16.json
+IDEFICS2,cifar4,remap,16,5695,not inferred,not inferred,bfloat16,saved native episode; all-cell token ranges separately released,prompts/IDEFICS2_cifar4_remap_K16.json
+IDEFICS2,cifar4,remap,0,363,not inferred,not inferred,bfloat16,saved native episode; all-cell token ranges separately released,prompts/IDEFICS2_cifar4_remap_K0.json
+IDEFICS2,cifar4,standard,0,360,not inferred,not inferred,bfloat16,saved native episode; all-cell token ranges separately released,prompts/IDEFICS2_cifar4_standard_K0.json
+IDEFICS2,cifar4,standard,16,5680,not inferred,not inferred,bfloat16,saved native episode; all-cell token ranges separately released,prompts/IDEFICS2_cifar4_standard_K16.json
+Mantis,cifar4,remap,16,1275,not inferred,not inferred,float32,saved native episode; all-cell token ranges separately released,prompts/Mantis_cifar4_remap_K16.json
+Mantis,cifar4,remap,0,103,not inferred,not inferred,float32,saved native episode; all-cell token ranges separately released,prompts/Mantis_cifar4_remap_K0.json
+Mantis,cifar4,standard,0,100,not inferred,not inferred,float32,saved native episode; all-cell token ranges separately released,prompts/Mantis_cifar4_standard_K0.json
+Mantis,cifar4,standard,16,1260,not inferred,not inferred,float32,saved native episode; all-cell token ranges separately released,prompts/Mantis_cifar4_standard_K16.json
+OpenFlamingo,cifar4,remap,16,180,not inferred,not inferred,float32,saved native episode; all-cell token ranges separately released,prompts/OpenFlamingo_cifar4_remap_K16.json
+OpenFlamingo,cifar4,remap,0,32,not inferred,not inferred,float32,saved native episode; all-cell token ranges separately released,prompts/OpenFlamingo_cifar4_remap_K0.json
+OpenFlamingo,cifar4,standard,0,27,not inferred,not inferred,float32,saved native episode; all-cell token ranges separately released,prompts/OpenFlamingo_cifar4_standard_K0.json
+OpenFlamingo,cifar4,standard,16,155,not inferred,not inferred,float32,saved native episode; all-cell token ranges separately released,prompts/OpenFlamingo_cifar4_standard_K16.json
+Qwen2.5-VL-3B,shapes,standard,0,61,16,16,bfloat16,saved native episode; all-cell token ranges separately released,prompts/Qwen2.5-VL-3B_shapes_standard_K0.json
+Qwen2.5-VL-3B,shapes,remap,0,66,16,16,bfloat16,saved native episode; all-cell token ranges separately released,prompts/Qwen2.5-VL-3B_shapes_remap_K0.json
+Qwen2.5-VL-3B,shapes,remap,16,469,272,16,bfloat16,saved native episode; all-cell token ranges separately released,prompts/Qwen2.5-VL-3B_shapes_remap_K16.json
+Qwen2.5-VL-3B,shapes,standard,16,445,272,16,bfloat16,saved native episode; all-cell token ranges separately released,prompts/Qwen2.5-VL-3B_shapes_standard_K16.json
+InternVL3-2B,shapes,standard,0,291,256,256,bfloat16,saved native episode; all-cell token ranges separately released,prompts/InternVL3-2B_shapes_standard_K0.json
+InternVL3-2B,shapes,remap,0,296,256,256,bfloat16,saved native episode; all-cell token ranges separately released,prompts/InternVL3-2B_shapes_remap_K0.json
+InternVL3-2B,shapes,remap,16,4555,4352,256,bfloat16,saved native episode; all-cell token ranges separately released,prompts/InternVL3-2B_shapes_remap_K16.json
+InternVL3-2B,shapes,standard,16,4531,4352,256,bfloat16,saved native episode; all-cell token ranges separately released,prompts/InternVL3-2B_shapes_standard_K16.json

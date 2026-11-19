@@ -1,0 +1,6 @@
+{
+  "family": "continual",
+  "arms": ["joint", "late", "all_depth", "late_replay"],
+  "orders": [0, 1, 2],
+  "seeds": [0, 1, 2]
+}

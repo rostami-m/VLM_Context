@@ -1,0 +1,10 @@
+# Recorded accepted runtime; use a separate environment for this model family.
+# Python 3.12
+Pillow==12.3.0
+accelerate==1.15.0
+numpy==2.5.3
+peft==0.21.0
+safetensors==0.8.0
+tokenizers==0.21.4
+torch==2.14.0
+transformers==4.49.0

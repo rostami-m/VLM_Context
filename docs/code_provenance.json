@@ -1,0 +1,966 @@
+[
+  {
+    "original": "code/incontext_collapse/revision_protocol.py",
+    "original_sha256": "080cd8124f33f26141d332b4b50d5d7da25d869305868265889973606b911ac7",
+    "public_file": "vlm_context/protocol.py",
+    "definition": "entire module",
+    "changes": {
+      "Preparation-only revision utilities; NOT integrated with model runners.": "Deterministic episode construction and explicit scorer diagnostics.",
+      "Actual image hashes, token boundaries, EOS policy, and model integration still\nrequire validation before any experiment can use these prepared records.": "Model runners separately validate image hashes, token boundaries and EOS policy."
+    }
+  },
+  {
+    "original": "code/incontext_collapse/revision_shapes.py",
+    "original_sha256": "a61d65d93336c3a28ae3ebfec8b89abb02de7042a0bf32749d35e03c46fa3c25",
+    "public_file": "vlm_context/shapes.py",
+    "definition": "entire module",
+    "changes": {
+      ".revision_protocol": ".protocol",
+      "Deterministic Shapes images and explicit disjoint revision data roles.": "Deterministic Shapes images and explicit disjoint data roles."
+    }
+  },
+  {
+    "original": "code/incontext_collapse/revision_evaluator.py",
+    "original_sha256": "616105ed68967775b2190c0e7d24c501d3fce4540bce936e274761a0b5868241",
+    "definition": "MODEL_ID",
+    "source_lines": [
+      27,
+      27
+    ],
+    "public_file": "vlm_context/qwen_base.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_evaluator.py",
+    "original_sha256": "616105ed68967775b2190c0e7d24c501d3fce4540bce936e274761a0b5868241",
+    "definition": "MODEL_REVISION",
+    "source_lines": [
+      28,
+      28
+    ],
+    "public_file": "vlm_context/qwen_base.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_evaluator.py",
+    "original_sha256": "616105ed68967775b2190c0e7d24c501d3fce4540bce936e274761a0b5868241",
+    "definition": "SAMPLERS",
+    "source_lines": [
+      29,
+      29
+    ],
+    "public_file": "vlm_context/qwen_base.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_evaluator.py",
+    "original_sha256": "616105ed68967775b2190c0e7d24c501d3fce4540bce936e274761a0b5868241",
+    "definition": "REMAP",
+    "source_lines": [
+      30,
+      30
+    ],
+    "public_file": "vlm_context/qwen_base.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_evaluator.py",
+    "original_sha256": "616105ed68967775b2190c0e7d24c501d3fce4540bce936e274761a0b5868241",
+    "definition": "render_messages",
+    "source_lines": [
+      84,
+      97
+    ],
+    "public_file": "vlm_context/qwen_base.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_evaluator.py",
+    "original_sha256": "616105ed68967775b2190c0e7d24c501d3fce4540bce936e274761a0b5868241",
+    "definition": "validate_answer_boundary",
+    "source_lines": [
+      100,
+      122
+    ],
+    "public_file": "vlm_context/qwen_base.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_evaluator.py",
+    "original_sha256": "616105ed68967775b2190c0e7d24c501d3fce4540bce936e274761a0b5868241",
+    "definition": "QwenEvaluator",
+    "source_lines": [
+      190,
+      390
+    ],
+    "public_file": "vlm_context/qwen_base.py",
+    "changes": {}
+  },
+  {
+    "original": "revision/cpu_queue_20261105/joint_depth/run_joint_depth.py",
+    "original_sha256": "bb2fabb9edc74779c12e6477ffde6627a128d3e0a56dd4b8340b4972faeded6c",
+    "definition": "render_explicit",
+    "source_lines": [
+      106,
+      117
+    ],
+    "public_file": "vlm_context/explicit.py",
+    "changes": {
+      "p.require": "require"
+    }
+  },
+  {
+    "original": "revision/cpu_queue_20261105/joint_depth/run_joint_depth.py",
+    "original_sha256": "bb2fabb9edc74779c12e6477ffde6627a128d3e0a56dd4b8340b4972faeded6c",
+    "definition": "expand_variant",
+    "source_lines": [
+      120,
+      128
+    ],
+    "public_file": "vlm_context/explicit.py",
+    "changes": {
+      "p.require": "require"
+    }
+  },
+  {
+    "original": "revision/cpu_queue_20261105/joint_depth/run_joint_depth.py",
+    "original_sha256": "bb2fabb9edc74779c12e6477ffde6627a128d3e0a56dd4b8340b4972faeded6c",
+    "definition": "validate_three_scoring_paths",
+    "source_lines": [
+      131,
+      145
+    ],
+    "public_file": "vlm_context/explicit.py",
+    "changes": {
+      "p.require": "require"
+    }
+  },
+  {
+    "original": "revision/cpu_queue_20261105/joint_depth/run_joint_depth.py",
+    "original_sha256": "bb2fabb9edc74779c12e6477ffde6627a128d3e0a56dd4b8340b4972faeded6c",
+    "definition": "ExplicitEvaluator",
+    "source_lines": [
+      148,
+      178
+    ],
+    "public_file": "vlm_context/explicit.py",
+    "changes": {
+      "p.require": "require"
+    }
+  },
+  {
+    "original": "code/incontext_collapse/revision_adaptation.py",
+    "original_sha256": "b47f67269c7c06e1f9dc019e91ba9eab55cf0e481125c640a91a66d82c479a3c",
+    "definition": "complete_answer_mask",
+    "source_lines": [
+      183,
+      198
+    ],
+    "public_file": "vlm_context/training_primitives.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_adaptation.py",
+    "original_sha256": "b47f67269c7c06e1f9dc019e91ba9eab55cf0e481125c640a91a66d82c479a3c",
+    "definition": "training_batch",
+    "source_lines": [
+      228,
+      240
+    ],
+    "public_file": "vlm_context/training_primitives.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_adaptation.py",
+    "original_sha256": "b47f67269c7c06e1f9dc019e91ba9eab55cf0e481125c640a91a66d82c479a3c",
+    "definition": "parameter_hashes",
+    "source_lines": [
+      335,
+      349
+    ],
+    "public_file": "vlm_context/training_primitives.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_adaptation.py",
+    "original_sha256": "b47f67269c7c06e1f9dc019e91ba9eab55cf0e481125c640a91a66d82c479a3c",
+    "definition": "compare_roundtrip",
+    "source_lines": [
+      352,
+      364
+    ],
+    "public_file": "vlm_context/training_primitives.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_adaptation.py",
+    "original_sha256": "b47f67269c7c06e1f9dc019e91ba9eab55cf0e481125c640a91a66d82c479a3c",
+    "definition": "require_positive_norms",
+    "source_lines": [
+      367,
+      370
+    ],
+    "public_file": "vlm_context/training_primitives.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_adaptation.py",
+    "original_sha256": "b47f67269c7c06e1f9dc019e91ba9eab55cf0e481125c640a91a66d82c479a3c",
+    "definition": "require_error_bound",
+    "source_lines": [
+      373,
+      377
+    ],
+    "public_file": "vlm_context/training_primitives.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_confirmation_fit.py",
+    "original_sha256": "a6861c2b6ec0e8b5628c892222ce7c0225fb3a8d2347c0c9bae3efd44d628e5a",
+    "definition": "PROJECTION_ORDER",
+    "source_lines": [
+      32,
+      33
+    ],
+    "public_file": "vlm_context/targets.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_confirmation_fit.py",
+    "original_sha256": "a6861c2b6ec0e8b5628c892222ce7c0225fb3a8d2347c0c9bae3efd44d628e5a",
+    "definition": "SPARSE",
+    "source_lines": [
+      34,
+      34
+    ],
+    "public_file": "vlm_context/targets.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_confirmation_fit.py",
+    "original_sha256": "a6861c2b6ec0e8b5628c892222ce7c0225fb3a8d2347c0c9bae3efd44d628e5a",
+    "definition": "EXPECTED",
+    "source_lines": [
+      35,
+      37
+    ],
+    "public_file": "vlm_context/targets.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_confirmation_fit.py",
+    "original_sha256": "a6861c2b6ec0e8b5628c892222ce7c0225fb3a8d2347c0c9bae3efd44d628e5a",
+    "definition": "RANK2_BLOCKS",
+    "source_lines": [
+      38,
+      38
+    ],
+    "public_file": "vlm_context/targets.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_confirmation_fit.py",
+    "original_sha256": "a6861c2b6ec0e8b5628c892222ce7c0225fb3a8d2347c0c9bae3efd44d628e5a",
+    "definition": "arm_specs",
+    "source_lines": [
+      41,
+      49
+    ],
+    "public_file": "vlm_context/targets.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_confirmation_fit.py",
+    "original_sha256": "a6861c2b6ec0e8b5628c892222ce7c0225fb3a8d2347c0c9bae3efd44d628e5a",
+    "definition": "target_spec",
+    "source_lines": [
+      52,
+      70
+    ],
+    "public_file": "vlm_context/targets.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_confirmation_fit.py",
+    "original_sha256": "a6861c2b6ec0e8b5628c892222ce7c0225fb3a8d2347c0c9bae3efd44d628e5a",
+    "definition": "expected_linear_shapes",
+    "source_lines": [
+      73,
+      81
+    ],
+    "public_file": "vlm_context/targets.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_confirmation_fit.py",
+    "original_sha256": "a6861c2b6ec0e8b5628c892222ce7c0225fb3a8d2347c0c9bae3efd44d628e5a",
+    "definition": "target_inventory",
+    "source_lines": [
+      84,
+      107
+    ],
+    "public_file": "vlm_context/targets.py",
+    "changes": {}
+  },
+  {
+    "original": "revision/cpu_queue_20261105/joint_depth/prepare_joint_depth.py",
+    "original_sha256": "3e848c0d1f62863654c40bfc7f9f09edcba031282ab8f84495552faf11f78d91",
+    "definition": "target_ledger",
+    "source_lines": [
+      85,
+      101
+    ],
+    "public_file": "vlm_context/joint_targets.py",
+    "changes": {}
+  },
+  {
+    "original": "revision/cpu_queue_20261105/joint_depth/prepare_joint_depth.py",
+    "original_sha256": "3e848c0d1f62863654c40bfc7f9f09edcba031282ab8f84495552faf11f78d91",
+    "definition": "validate_instantiated_targets",
+    "source_lines": [
+      104,
+      121
+    ],
+    "public_file": "vlm_context/joint_targets.py",
+    "changes": {}
+  },
+  {
+    "original": "revision/cpu_queue_20261105/joint_depth/prepare_joint_depth.py",
+    "original_sha256": "3e848c0d1f62863654c40bfc7f9f09edcba031282ab8f84495552faf11f78d91",
+    "definition": "make_recipes",
+    "source_lines": [
+      124,
+      162
+    ],
+    "public_file": "vlm_context/joint_targets.py",
+    "changes": {}
+  },
+  {
+    "original": "revision/cpu_queue_20261105/joint_depth/run_joint_depth.py",
+    "original_sha256": "bb2fabb9edc74779c12e6477ffde6627a128d3e0a56dd4b8340b4972faeded6c",
+    "definition": "attach_adapter",
+    "source_lines": [
+      181,
+      200
+    ],
+    "public_file": "vlm_context/joint_adaptation.py",
+    "changes": {
+      "p.require": "require",
+      "p.validate_instantiated_targets": "validate_instantiated_targets"
+    }
+  },
+  {
+    "original": "code/incontext_collapse/revision_confirmation.py",
+    "original_sha256": "11b77b210be2e157bd06c85c255b00d1071fea7b827a5e07b97a1b5fc2ea03b9",
+    "definition": "NAMES",
+    "source_lines": [
+      21,
+      23
+    ],
+    "public_file": "vlm_context/data_contract.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_confirmation.py",
+    "original_sha256": "11b77b210be2e157bd06c85c255b00d1071fea7b827a5e07b97a1b5fc2ea03b9",
+    "definition": "ROLES",
+    "source_lines": [
+      24,
+      25
+    ],
+    "public_file": "vlm_context/data_contract.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_confirmation.py",
+    "original_sha256": "11b77b210be2e157bd06c85c255b00d1071fea7b827a5e07b97a1b5fc2ea03b9",
+    "definition": "load_image",
+    "source_lines": [
+      172,
+      181
+    ],
+    "public_file": "vlm_context/data_contract.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_confirmation.py",
+    "original_sha256": "11b77b210be2e157bd06c85c255b00d1071fea7b827a5e07b97a1b5fc2ea03b9",
+    "definition": "dataset_roles",
+    "source_lines": [
+      184,
+      207
+    ],
+    "public_file": "vlm_context/data_contract.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_datasets.py",
+    "original_sha256": "42f434036b586f41dd5a99a20c0964d676745a4292c572c0d9ae1e33a9c5df8b",
+    "definition": "VERSION",
+    "source_lines": [
+      19,
+      19
+    ],
+    "public_file": "vlm_context/dataset_primitives.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_datasets.py",
+    "original_sha256": "42f434036b586f41dd5a99a20c0964d676745a4292c572c0d9ae1e33a9c5df8b",
+    "definition": "TASKS",
+    "source_lines": [
+      20,
+      32
+    ],
+    "public_file": "vlm_context/dataset_primitives.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_datasets.py",
+    "original_sha256": "42f434036b586f41dd5a99a20c0964d676745a4292c572c0d9ae1e33a9c5df8b",
+    "definition": "ROLE_COUNTS",
+    "source_lines": [
+      33,
+      35
+    ],
+    "public_file": "vlm_context/dataset_primitives.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_datasets.py",
+    "original_sha256": "42f434036b586f41dd5a99a20c0964d676745a4292c572c0d9ae1e33a9c5df8b",
+    "definition": "ROLE_PARTITIONS",
+    "source_lines": [
+      36,
+      37
+    ],
+    "public_file": "vlm_context/dataset_primitives.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_datasets.py",
+    "original_sha256": "42f434036b586f41dd5a99a20c0964d676745a4292c572c0d9ae1e33a9c5df8b",
+    "definition": "decoded_hash",
+    "source_lines": [
+      48,
+      51
+    ],
+    "public_file": "vlm_context/dataset_primitives.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_datasets.py",
+    "original_sha256": "42f434036b586f41dd5a99a20c0964d676745a4292c572c0d9ae1e33a9c5df8b",
+    "definition": "model_image",
+    "source_lines": [
+      54,
+      57
+    ],
+    "public_file": "vlm_context/dataset_primitives.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_datasets.py",
+    "original_sha256": "42f434036b586f41dd5a99a20c0964d676745a4292c572c0d9ae1e33a9c5df8b",
+    "definition": "_save_image",
+    "source_lines": [
+      81,
+      102
+    ],
+    "public_file": "vlm_context/dataset_primitives.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_datasets.py",
+    "original_sha256": "42f434036b586f41dd5a99a20c0964d676745a4292c572c0d9ae1e33a9c5df8b",
+    "definition": "_source_id",
+    "source_lines": [
+      127,
+      128
+    ],
+    "public_file": "vlm_context/dataset_primitives.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_datasets.py",
+    "original_sha256": "42f434036b586f41dd5a99a20c0964d676745a4292c572c0d9ae1e33a9c5df8b",
+    "definition": "_describe",
+    "source_lines": [
+      131,
+      141
+    ],
+    "public_file": "vlm_context/dataset_primitives.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_datasets.py",
+    "original_sha256": "42f434036b586f41dd5a99a20c0964d676745a4292c572c0d9ae1e33a9c5df8b",
+    "definition": "_historical_rows",
+    "source_lines": [
+      144,
+      157
+    ],
+    "public_file": "vlm_context/dataset_primitives.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_datasets.py",
+    "original_sha256": "42f434036b586f41dd5a99a20c0964d676745a4292c572c0d9ae1e33a9c5df8b",
+    "definition": "assemble_manifest",
+    "source_lines": [
+      160,
+      247
+    ],
+    "public_file": "vlm_context/dataset_primitives.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_cama.py",
+    "original_sha256": "2334ce550d709d17eb772ac74fa26bed135fe18aa8dce44d52855d560e475263",
+    "public_file": "vlm_context/cama.py",
+    "definition": "entire module",
+    "changes": {
+      ".revision_protocol": ".protocol"
+    }
+  },
+  {
+    "original": "code/incontext_collapse/revision_calibration.py",
+    "original_sha256": "de1d9ecb43e22105a1aacc44e92896db0a0a54949ea8469b60740f8766f1d34e",
+    "public_file": "vlm_context/calibration.py",
+    "definition": "entire module",
+    "changes": {
+      "CPU score-space calibration primitives; model integration remains gated.": "CPU score-space calibration primitives."
+    }
+  },
+  {
+    "original": "code/incontext_collapse/revision_baseline_panel_v1.py",
+    "original_sha256": "93d8c02f678aa8d7cf829e79abaeb469992d65c99271e1c8f98eb17c09b4edff",
+    "definition": "NEUTRAL",
+    "source_lines": [
+      28,
+      28
+    ],
+    "public_file": "vlm_context/baseline_scoring.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_baseline_panel_v1.py",
+    "original_sha256": "93d8c02f678aa8d7cf829e79abaeb469992d65c99271e1c8f98eb17c09b4edff",
+    "definition": "validate_score_record",
+    "source_lines": [
+      207,
+      219
+    ],
+    "public_file": "vlm_context/baseline_scoring.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_baseline_panel_v1.py",
+    "original_sha256": "93d8c02f678aa8d7cf829e79abaeb469992d65c99271e1c8f98eb17c09b4edff",
+    "definition": "neutral_episode",
+    "source_lines": [
+      222,
+      228
+    ],
+    "public_file": "vlm_context/baseline_scoring.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_baseline_panel_v1.py",
+    "original_sha256": "93d8c02f678aa8d7cf829e79abaeb469992d65c99271e1c8f98eb17c09b4edff",
+    "definition": "calibrate_panel",
+    "source_lines": [
+      231,
+      252
+    ],
+    "public_file": "vlm_context/baseline_scoring.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_baseline_panel_v1.py",
+    "original_sha256": "93d8c02f678aa8d7cf829e79abaeb469992d65c99271e1c8f98eb17c09b4edff",
+    "definition": "compare_scores",
+    "source_lines": [
+      279,
+      291
+    ],
+    "public_file": "vlm_context/baseline_scoring.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_baseline_panel_v1.py",
+    "original_sha256": "93d8c02f678aa8d7cf829e79abaeb469992d65c99271e1c8f98eb17c09b4edff",
+    "definition": "native_control",
+    "source_lines": [
+      294,
+      311
+    ],
+    "public_file": "vlm_context/baseline_scoring.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_baseline_panel_v1.py",
+    "original_sha256": "93d8c02f678aa8d7cf829e79abaeb469992d65c99271e1c8f98eb17c09b4edff",
+    "definition": "evaluate_baseline",
+    "source_lines": [
+      314,
+      342
+    ],
+    "public_file": "vlm_context/baseline_scoring.py",
+    "changes": {}
+  },
+  {
+    "original": "code/incontext_collapse/revision_baseline_panel_v1.py",
+    "original_sha256": "93d8c02f678aa8d7cf829e79abaeb469992d65c99271e1c8f98eb17c09b4edff",
+    "definition": "neutral_loader",
+    "source_lines": [
+      345,
+      352
+    ],
+    "public_file": "vlm_context/baseline_scoring.py",
+    "changes": {}
+  },
+  {
+    "original": "revision/execution_20261106/interventions/dara.py",
+    "original_sha256": "b0ed0e1f02e061d758e58e089889ecdd976ce2b2df5f20322f024f4bb5779b4e",
+    "definition": "RECIPE",
+    "source_lines": [
+      8,
+      14
+    ],
+    "public_file": "vlm_context/kernels/baseline/dara.py",
+    "changes": {
+      "from incontext_collapse.revision_adaptation import training_batch": "from vlm_context.adaptation import training_batch",
+      "    from incontext_collapse.revision_confirmation import dataset_roles\n": "",
+      "    from incontext_collapse.revision_confirmation_fit import training_schedule\n": "",
+      "episodes=training_schedule('shapes4',dataset_roles('shapes4',manifest),objective,session.args.seed or 0)": "episodes=read(source_path('data/protocols/q05/training_schedule.json.gz'))['shapes4'][str(session.args.seed or 0)]['training'][objective]"
+    }
+  },
+  {
+    "original": "revision/execution_20261106/interventions/dara.py",
+    "original_sha256": "b0ed0e1f02e061d758e58e089889ecdd976ce2b2df5f20322f024f4bb5779b4e",
+    "definition": "factor_tensor",
+    "source_lines": [
+      17,
+      22
+    ],
+    "public_file": "vlm_context/kernels/baseline/dara.py",
+    "changes": {
+      "from incontext_collapse.revision_adaptation import training_batch": "from vlm_context.adaptation import training_batch",
+      "    from incontext_collapse.revision_confirmation import dataset_roles\n": "",
+      "    from incontext_collapse.revision_confirmation_fit import training_schedule\n": "",
+      "episodes=training_schedule('shapes4',dataset_roles('shapes4',manifest),objective,session.args.seed or 0)": "episodes=read(source_path('data/protocols/q05/training_schedule.json.gz'))['shapes4'][str(session.args.seed or 0)]['training'][objective]"
+    }
+  },
+  {
+    "original": "revision/execution_20261106/interventions/dara.py",
+    "original_sha256": "b0ed0e1f02e061d758e58e089889ecdd976ce2b2df5f20322f024f4bb5779b4e",
+    "definition": "scored",
+    "source_lines": [
+      25,
+      34
+    ],
+    "public_file": "vlm_context/kernels/baseline/dara.py",
+    "changes": {
+      "from incontext_collapse.revision_adaptation import training_batch": "from vlm_context.adaptation import training_batch",
+      "    from incontext_collapse.revision_confirmation import dataset_roles\n": "",
+      "    from incontext_collapse.revision_confirmation_fit import training_schedule\n": "",
+      "episodes=training_schedule('shapes4',dataset_roles('shapes4',manifest),objective,session.args.seed or 0)": "episodes=read(source_path('data/protocols/q05/training_schedule.json.gz'))['shapes4'][str(session.args.seed or 0)]['training'][objective]"
+    }
+  },
+  {
+    "original": "revision/execution_20261106/interventions/dara.py",
+    "original_sha256": "b0ed0e1f02e061d758e58e089889ecdd976ce2b2df5f20322f024f4bb5779b4e",
+    "definition": "train_steps",
+    "source_lines": [
+      56,
+      112
+    ],
+    "public_file": "vlm_context/kernels/baseline/dara.py",
+    "changes": {
+      "from incontext_collapse.revision_adaptation import training_batch": "from vlm_context.adaptation import training_batch",
+      "    from incontext_collapse.revision_confirmation import dataset_roles\n": "",
+      "    from incontext_collapse.revision_confirmation_fit import training_schedule\n": "",
+      "episodes=training_schedule('shapes4',dataset_roles('shapes4',manifest),objective,session.args.seed or 0)": "episodes=read(source_path('data/protocols/q05/training_schedule.json.gz'))['shapes4'][str(session.args.seed or 0)]['training'][objective]"
+    }
+  },
+  {
+    "original": "revision/execution_20261106/precision_recovery_v1/q08/features.py",
+    "original_sha256": "3bb93d9bc35bb1c45c0dfa0c4e3cab351286b92a85aefa725c0e6a6046e14f20",
+    "definition": "pool",
+    "source_lines": [
+      11,
+      15
+    ],
+    "public_file": "vlm_context/kernels/baseline/features.py",
+    "changes": {
+      "from incontext_collapse.revision_evaluator import render_messages": "from vlm_context.qwen import render_messages",
+      "from policy_math import cosine_nearest": "from vlm_context.kernels.gate.policy import cosine_nearest",
+      "'scientific_efficacy_approved':False": "'evaluation_precision':'float32'"
+    }
+  },
+  {
+    "original": "revision/execution_20261106/precision_recovery_v1/q08/features.py",
+    "original_sha256": "3bb93d9bc35bb1c45c0dfa0c4e3cab351286b92a85aefa725c0e6a6046e14f20",
+    "definition": "features",
+    "source_lines": [
+      18,
+      76
+    ],
+    "public_file": "vlm_context/kernels/baseline/features.py",
+    "changes": {
+      "from incontext_collapse.revision_evaluator import render_messages": "from vlm_context.qwen import render_messages",
+      "from policy_math import cosine_nearest": "from vlm_context.kernels.gate.policy import cosine_nearest",
+      "'scientific_efficacy_approved':False": "'evaluation_precision':'float32'"
+    }
+  },
+  {
+    "original": "revision/execution_20261106/interventions/mechanism.py",
+    "original_sha256": "3b7548ab81bc640cec5fcbaba6b3aedeb8dfce73bc534c829be3d527246e3480",
+    "definition": "LAYERS",
+    "source_lines": [
+      8,
+      8
+    ],
+    "public_file": "vlm_context/kernels/mechanism/operations.py",
+    "changes": {
+      "'approved_for_confirmation':False": "'selection_scope':'development_only'",
+      "'scientific_efficacy_approved':False": "'interpretation':'descriptive'"
+    }
+  },
+  {
+    "original": "revision/execution_20261106/interventions/mechanism.py",
+    "original_sha256": "3b7548ab81bc640cec5fcbaba6b3aedeb8dfce73bc534c829be3d527246e3480",
+    "definition": "METHODS",
+    "source_lines": [
+      9,
+      10
+    ],
+    "public_file": "vlm_context/kernels/mechanism/operations.py",
+    "changes": {
+      "'approved_for_confirmation':False": "'selection_scope':'development_only'",
+      "'scientific_efficacy_approved':False": "'interpretation':'descriptive'"
+    }
+  },
+  {
+    "original": "revision/execution_20261106/interventions/mechanism.py",
+    "original_sha256": "3b7548ab81bc640cec5fcbaba6b3aedeb8dfce73bc534c829be3d527246e3480",
+    "definition": "episodes",
+    "source_lines": [
+      13,
+      21
+    ],
+    "public_file": "vlm_context/kernels/mechanism/operations.py",
+    "changes": {
+      "'approved_for_confirmation':False": "'selection_scope':'development_only'",
+      "'scientific_efficacy_approved':False": "'interpretation':'descriptive'"
+    }
+  },
+  {
+    "original": "revision/execution_20261106/interventions/mechanism.py",
+    "original_sha256": "3b7548ab81bc640cec5fcbaba6b3aedeb8dfce73bc534c829be3d527246e3480",
+    "definition": "trace",
+    "source_lines": [
+      24,
+      66
+    ],
+    "public_file": "vlm_context/kernels/mechanism/operations.py",
+    "changes": {
+      "'approved_for_confirmation':False": "'selection_scope':'development_only'",
+      "'scientific_efficacy_approved':False": "'interpretation':'descriptive'"
+    }
+  },
+  {
+    "original": "revision/execution_20261106/interventions/mechanism.py",
+    "original_sha256": "3b7548ab81bc640cec5fcbaba6b3aedeb8dfce73bc534c829be3d527246e3480",
+    "definition": "smoke",
+    "source_lines": [
+      73,
+      78
+    ],
+    "public_file": "vlm_context/kernels/mechanism/operations.py",
+    "changes": {
+      "'approved_for_confirmation':False": "'selection_scope':'development_only'",
+      "'scientific_efficacy_approved':False": "'interpretation':'descriptive'"
+    }
+  },
+  {
+    "original": "revision/execution_20261106/interventions/mechanism.py",
+    "original_sha256": "3b7548ab81bc640cec5fcbaba6b3aedeb8dfce73bc534c829be3d527246e3480",
+    "definition": "development",
+    "source_lines": [
+      81,
+      103
+    ],
+    "public_file": "vlm_context/kernels/mechanism/operations.py",
+    "changes": {
+      "'approved_for_confirmation':False": "'selection_scope':'development_only'",
+      "'scientific_efficacy_approved':False": "'interpretation':'descriptive'"
+    }
+  },
+  {
+    "original": "revision/execution_20261106/interventions/mechanism.py",
+    "original_sha256": "3b7548ab81bc640cec5fcbaba6b3aedeb8dfce73bc534c829be3d527246e3480",
+    "definition": "attention_descriptive",
+    "source_lines": [
+      131,
+      153
+    ],
+    "public_file": "vlm_context/kernels/mechanism/operations.py",
+    "changes": {
+      "'approved_for_confirmation':False": "'selection_scope':'development_only'",
+      "'scientific_efficacy_approved':False": "'interpretation':'descriptive'"
+    }
+  },
+  {
+    "original": "revision/remote_sean_20261106/position_experiment/run.py",
+    "original_sha256": "5daa5aad51aa494f5ea835006e9ba38b034fb90d8d301023d836939febba516f",
+    "definition": "CONDITIONS",
+    "source_lines": [
+      34,
+      34
+    ],
+    "public_file": "vlm_context/kernels/position.py",
+    "changes": {
+      "from incontext_collapse.revision_protocol import parse_diagnostics": "from vlm_context.protocol import parse_diagnostics",
+      "'integration_status':'requires_same_runtime_independent_smoke_review'": "'native_scoring_validation':'independent full and stepwise paths'"
+    }
+  },
+  {
+    "original": "revision/remote_sean_20261106/position_experiment/run.py",
+    "original_sha256": "5daa5aad51aa494f5ea835006e9ba38b034fb90d8d301023d836939febba516f",
+    "definition": "VARIANTS",
+    "source_lines": [
+      35,
+      35
+    ],
+    "public_file": "vlm_context/kernels/position.py",
+    "changes": {
+      "from incontext_collapse.revision_protocol import parse_diagnostics": "from vlm_context.protocol import parse_diagnostics",
+      "'integration_status':'requires_same_runtime_independent_smoke_review'": "'native_scoring_validation':'independent full and stepwise paths'"
+    }
+  },
+  {
+    "original": "revision/remote_sean_20261106/position_experiment/run.py",
+    "original_sha256": "5daa5aad51aa494f5ea835006e9ba38b034fb90d8d301023d836939febba516f",
+    "definition": "VERSION",
+    "source_lines": [
+      36,
+      36
+    ],
+    "public_file": "vlm_context/kernels/position.py",
+    "changes": {
+      "from incontext_collapse.revision_protocol import parse_diagnostics": "from vlm_context.protocol import parse_diagnostics",
+      "'integration_status':'requires_same_runtime_independent_smoke_review'": "'native_scoring_validation':'independent full and stepwise paths'"
+    }
+  },
+  {
+    "original": "revision/remote_sean_20261106/position_experiment/run.py",
+    "original_sha256": "5daa5aad51aa494f5ea835006e9ba38b034fb90d8d301023d836939febba516f",
+    "definition": "canonical",
+    "source_lines": [
+      44,
+      46
+    ],
+    "public_file": "vlm_context/kernels/position.py",
+    "changes": {
+      "from incontext_collapse.revision_protocol import parse_diagnostics": "from vlm_context.protocol import parse_diagnostics",
+      "'integration_status':'requires_same_runtime_independent_smoke_review'": "'native_scoring_validation':'independent full and stepwise paths'"
+    }
+  },
+  {
+    "original": "revision/remote_sean_20261106/position_experiment/run.py",
+    "original_sha256": "5daa5aad51aa494f5ea835006e9ba38b034fb90d8d301023d836939febba516f",
+    "definition": "digest",
+    "source_lines": [
+      49,
+      50
+    ],
+    "public_file": "vlm_context/kernels/position.py",
+    "changes": {
+      "from incontext_collapse.revision_protocol import parse_diagnostics": "from vlm_context.protocol import parse_diagnostics",
+      "'integration_status':'requires_same_runtime_independent_smoke_review'": "'native_scoring_validation':'independent full and stepwise paths'"
+    }
+  },
+  {
+    "original": "revision/remote_sean_20261106/position_experiment/run.py",
+    "original_sha256": "5daa5aad51aa494f5ea835006e9ba38b034fb90d8d301023d836939febba516f",
+    "definition": "validate_triplet",
+    "source_lines": [
+      96,
+      129
+    ],
+    "public_file": "vlm_context/kernels/position.py",
+    "changes": {
+      "from incontext_collapse.revision_protocol import parse_diagnostics": "from vlm_context.protocol import parse_diagnostics",
+      "'integration_status':'requires_same_runtime_independent_smoke_review'": "'native_scoring_validation':'independent full and stepwise paths'"
+    }
+  },
+  {
+    "original": "revision/remote_sean_20261106/position_experiment/run.py",
+    "original_sha256": "5daa5aad51aa494f5ea835006e9ba38b034fb90d8d301023d836939febba516f",
+    "definition": "episode",
+    "source_lines": [
+      132,
+      142
+    ],
+    "public_file": "vlm_context/kernels/position.py",
+    "changes": {
+      "from incontext_collapse.revision_protocol import parse_diagnostics": "from vlm_context.protocol import parse_diagnostics",
+      "'integration_status':'requires_same_runtime_independent_smoke_review'": "'native_scoring_validation':'independent full and stepwise paths'"
+    }
+  },
+  {
+    "original": "revision/remote_sean_20261106/position_experiment/run.py",
+    "original_sha256": "5daa5aad51aa494f5ea835006e9ba38b034fb90d8d301023d836939febba516f",
+    "definition": "expand",
+    "source_lines": [
+      145,
+      156
+    ],
+    "public_file": "vlm_context/kernels/position.py",
+    "changes": {
+      "from incontext_collapse.revision_protocol import parse_diagnostics": "from vlm_context.protocol import parse_diagnostics",
+      "'integration_status':'requires_same_runtime_independent_smoke_review'": "'native_scoring_validation':'independent full and stepwise paths'"
+    }
+  },
+  {
+    "original": "revision/remote_sean_20261106/position_experiment/run.py",
+    "original_sha256": "5daa5aad51aa494f5ea835006e9ba38b034fb90d8d301023d836939febba516f",
+    "definition": "extended_validation",
+    "source_lines": [
+      245,
+      257
+    ],
+    "public_file": "vlm_context/kernels/position.py",
+    "changes": {
+      "from incontext_collapse.revision_protocol import parse_diagnostics": "from vlm_context.protocol import parse_diagnostics",
+      "'integration_status':'requires_same_runtime_independent_smoke_review'": "'native_scoring_validation':'independent full and stepwise paths'"
+    }
+  },
+  {
+    "original": "revision/remote_sean_20261106/position_experiment/run.py",
+    "original_sha256": "5daa5aad51aa494f5ea835006e9ba38b034fb90d8d301023d836939febba516f",
+    "definition": "validate_result",
+    "source_lines": [
+      260,
+      281
+    ],
+    "public_file": "vlm_context/kernels/position.py",
+    "changes": {
+      "from incontext_collapse.revision_protocol import parse_diagnostics": "from vlm_context.protocol import parse_diagnostics",
+      "'integration_status':'requires_same_runtime_independent_smoke_review'": "'native_scoring_validation':'independent full and stepwise paths'"
+    }
+  },
+  {
+    "original": "revision/cpu_queue_20261105/policy_preparation/prepare.py",
+    "original_sha256": "b1cfb0f4a317715c6d06e4a703103af0c361934e509e3fb541e30018fd9a56d0",
+    "definition": "position_triplet",
+    "source_lines": [
+      43,
+      78
+    ],
+    "public_file": "vlm_context/kernels/position_schedule.py",
+    "changes": {}
+  }
+]

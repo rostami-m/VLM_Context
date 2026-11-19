@@ -1,0 +1,6 @@
+{
+  "family": "classification",
+  "study": "depth",
+  "task": "shapes4",
+  "arm": "window_0_3_r8"
+}

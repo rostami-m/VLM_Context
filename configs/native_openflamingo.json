@@ -1,0 +1,8 @@
+{
+  "study": "native_probes",
+  "spec": "data/protocols/families/openflamingo__OpenFlamingo-4B-vitl-rpj3b.json",
+  "episodes": "data/protocols/families/episodes.json.gz",
+  "task": "cifar4",
+  "family_runtime": "data/protocols/families/openflamingo_runtime.json",
+  "family": "native_probes"
+}

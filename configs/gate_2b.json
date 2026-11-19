@@ -1,0 +1,7 @@
+{
+  "family": "gate",
+  "model_id": "Qwen/Qwen2-VL-2B-Instruct",
+  "phase": "all",
+  "tasks": ["shapes4", "cifar4"],
+  "seeds": [0, 1, 2]
+}

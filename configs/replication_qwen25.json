@@ -1,0 +1,7 @@
+{
+  "study": "replication",
+  "spec": "data/protocols/replication/Qwen__Qwen2_5-VL-3B-Instruct_spec.json",
+  "task": "shapes4",
+  "arm": "frozen",
+  "family": "replication"
+}

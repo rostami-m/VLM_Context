@@ -1,0 +1,7 @@
+{
+  "family": "controller",
+  "arms": ["prompt_only_gate", "fixed_schedule_consolidation", "gate_triggered_consolidation"],
+  "orders": [0],
+  "seeds": [0, 1, 2],
+  "gate_threshold": 0.25
+}

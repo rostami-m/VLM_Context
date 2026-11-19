@@ -1,0 +1,7 @@
+{
+  "study": "native_probes",
+  "spec": "data/protocols/families/HuggingFaceM4__idefics2-8b.json",
+  "episodes": "data/protocols/families/episodes.json.gz",
+  "task": "cifar4",
+  "family": "native_probes"
+}

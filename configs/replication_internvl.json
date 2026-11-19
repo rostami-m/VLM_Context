@@ -1,0 +1,7 @@
+{
+  "study": "replication",
+  "spec": "data/protocols/replication/OpenGVLab__InternVL3-2B-hf_spec.json",
+  "task": "shapes4",
+  "arm": "frozen",
+  "family": "replication"
+}

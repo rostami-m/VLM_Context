@@ -1,0 +1,118 @@
+{
+  "sources": [
+    {
+      "source": "revision/execution_20261106/continual/contract.py",
+      "sha256": "a18948098e37e3e65bb1c77f6745d2531c1477353512da57eb4f12a7046d04cc",
+      "symbols": "contract; portable JSON reader and final controller scope wording"
+    },
+    {
+      "source": "revision/cpu_queue_20261105/policy_preparation/policies.py",
+      "sha256": "0f7d13c3b05e0f792d146ff6f66c672eb1bccd2236531cc97d038b8f4144a725",
+      "symbols": [
+        "canonical_hash",
+        "integer",
+        "finite",
+        "CopyGate",
+        "accuracy_matrix_metrics"
+      ]
+    },
+    {
+      "source": "revision/execution_20261106/continual/run.py",
+      "sha256": "1a98655adcc7488272a14cd71662ee75171ba1abea5fb42c75e1822b757410d9",
+      "symbols": [
+        "attach",
+        "NativeRun"
+      ]
+    },
+    {
+      "source": "revision/execution_20261106/interventions/policy_math.py",
+      "sha256": "38fe43c9c4405d837bade7cc6d58016db4949f6e3d462dfbbc6c246ff9481a90",
+      "symbols": [
+        "require",
+        "first_crossing",
+        "select_threshold",
+        "mean_difference",
+        "mean_state",
+        "eligibility",
+        "cosine_nearest"
+      ]
+    },
+    {
+      "source": "revision/execution_20261106/interventions/hooks.py",
+      "sha256": "7ab2ad2fc5e02df5a31961e5f37ef1a8a40a885d0e29020465be57544ea6000c",
+      "symbols": [
+        "classification_renderer",
+        "encode",
+        "segmentation",
+        "aligned",
+        "HiddenEdit",
+        "AttentionCut",
+        "capture",
+        "DaraColumns"
+      ]
+    },
+    {
+      "source": "revision/execution_20261106/interventions/cached_support.py",
+      "sha256": "0b907e0b0644535a56ae3a6e578977fe9fb0345a33167936cce9b5bb31df8a53",
+      "symbols": [
+        "SupportCache"
+      ]
+    },
+    {
+      "source": "revision/execution_20261106/interventions/common.py",
+      "sha256": "1f58165fde3fcb9cf6e22cd37028f29c7a0a070ce0553b3ef4b9c9570c285b8b",
+      "symbols": [
+        "validate_score",
+        "episode",
+        "score"
+      ]
+    },
+    {
+      "source": "revision/execution_20261106/interventions/inject.py",
+      "sha256": "4de52c1c9150dbbe4f475967593fdcf1047a12b85a723070c8f188c3a0d2a003",
+      "symbols": "extraction, eligibility, development and confirmation; portable checkpoint receipts and reverified selection replace campaign approvals"
+    },
+    {
+      "source": "revision/execution_20261106/interventions/readers.py",
+      "sha256": "f9dc7097e66023f77070244e6d830c09f701fe2410e45643710f835f73e9f4bf",
+      "symbols": "FP32 reader reload/unload and tensor validation; portable completed-fit paths"
+    },
+    {
+      "source": "revision/execution_20261110/deadline_q18_v1/backend.py",
+      "sha256": "a1d9c456b52b86d33ec65332a0befb53de69c14fa5d8d097f349160121628af7",
+      "symbols": "value-preserving BF16/FP32 controller phases"
+    },
+    {
+      "source": "revision/execution_20261110/deadline_q18_v1/execution.py",
+      "sha256": "abc38888cfae4991b19bb7c4828a421fbf2b529ac49d144f82b7b4c56002165d",
+      "symbols": "controller execution with final precision restoration"
+    },
+    {
+      "source": "revision/cpu_queue_20261105/continual_data/prepare.py",
+      "sha256": "c6108d7fcdd87c7c822f09fc36725049537150e62ea6e8e31ca6df3c0f61adea",
+      "symbols": "pinned CIFAR100 row selection and exact PNG materialization"
+    }
+  ],
+  "modifications": "Portable imports/paths and public invocation replace campaign orchestration; scientific functions retained. Per-family phase precision and final scopes are explicit in runners.",
+  "public_files": {
+    "vlm_context/kernels/continual/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "vlm_context/kernels/continual/contract.py": "c530cac5ff8f95f24bd782b5690f3a2ee66ef5c7f58a3cc37990a231eacf9b53",
+    "vlm_context/kernels/continual/materialize.py": "ca11f162aff3f7bbfe66ce2ed2ad391c1b50d570f8c6e617ad097167d7fa9353",
+    "vlm_context/kernels/continual/native.py": "102697ba47c82e73b47c662201d7d20071d64c43ae607bbdaca57777b4453cd9",
+    "vlm_context/kernels/continual/policies.py": "644d11a6b8f3225d0a3d8126b893a1510eba7753af2bf7b1a3399a31ebcff04f",
+    "vlm_context/kernels/controller/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "vlm_context/kernels/controller/execution.py": "c3e480401ea943a34b4e9a8d1198d7b1f44a5631e32af5baf53786abf9f80343",
+    "vlm_context/kernels/controller/native.py": "fde646dd86d1075252b9c95fb980fd6ee1a26326a1e8e1481f6732bb990b090f",
+    "vlm_context/kernels/gate/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "vlm_context/kernels/gate/common.py": "8d851b037c800c3cc87315fbf7d20e508e27a6d5fc21d72bcc3dcf26837ccb3a",
+    "vlm_context/kernels/gate/operations.py": "d32eaaf7fce83ddb69986d3a8fb183d7359497098a71a441b64504ce07edce6b",
+    "vlm_context/kernels/gate/policy.py": "e2db51796188d6ab6fdd57b3620c5d8303cd47d91bb3c9af1c772baa93fa064b",
+    "vlm_context/kernels/gate/session.py": "afe06aca2a21f6701dc047692d01dbe7385a28fade0b233b77e6e67e1e78e380",
+    "vlm_context/kernels/inject/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "vlm_context/kernels/inject/cache.py": "006bf8262eebbdbe37fd44eb56314c72ec7fbdb01042f2af538e1dafc2f4cd0e",
+    "vlm_context/kernels/inject/hooks.py": "10368998f5654fc73a2afbcd04cf311a068442544bdb9efdd1af447627cb6853",
+    "vlm_context/kernels/inject/operations.py": "9aad626fc8294f7d61d8343d6ee656f768d2f08442a3c34234191f31c9af2f8d",
+    "vlm_context/kernels/inject/readers.py": "325be0f4ea442a31b952131b5cd2c164ff82ed7eed65aeadd49dce2ab94fc59a"
+  },
+  "scope": "Scientific kernels preserve episode order, scoring, thresholds, adapter targets and precision phases; private campaign orchestration is replaced by portable arguments, immutable outputs and independent development-rule recomputation."
+}

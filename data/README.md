@@ -1,0 +1,9 @@
+# Released numerical evidence and frozen protocols
+
+`paper/` contains saved numerical evidence used by the manuscript reducers. `protocols/` contains exact query/support schedules, label assignments, fitting episodes, parameter targets, source dataset indices, scene blueprints and model snapshot fingerprints. No dataset images, model weights or private review documents are included.
+
+`PROVENANCE.json` maps each output to the SHA256 of its original source, its selected payload, the sanitized compressed output, and its decompressed payload. Operational machine paths, approval state and campaign bookkeeping were removed. Remaining archive-relative `raw_record` references are source identifiers, not required filesystem paths. Random namespaces and disjoint-role definitions are retained because they affect the scientific protocol. Numeric values and booleans in retained fields are checked unchanged by the exporter. Gzip headers have deterministic timestamps.
+
+The Q05 export contains 57,600 per-image outcomes and 2,880 complete-panel metric rows. `core_cells` contains 249 retained aggregate cells; `core_seed_cells` contains their absolute per-replicate metrics, and `core_seed_contrasts` contains paired differences. Other `*_results` files retain the saved family/task/policy summaries and uncertainty estimates. `prompts/` contains 44 source-bound native prompt fixtures. The regenerator recomputes supported arithmetic and renders tables/figures from these files; it does not synthesize unavailable historical raw outputs or rerun a model.
+
+The frozen protocol files distinguish task-specific Q05 training, Shapes-only core training, Q13 mixed natural/remap training, frozen native family probes, open-task transfer, interventions, and continual/controller schedules. These are distinct experiments and must not be interchanged. See the reproduction documents for executable entry points and image materialization commands.

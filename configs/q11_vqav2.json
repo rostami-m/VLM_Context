@@ -1,0 +1,6 @@
+{
+  "study": "vqa",
+  "task": "vqav2",
+  "arm": "frozen",
+  "family": "vqa"
+}

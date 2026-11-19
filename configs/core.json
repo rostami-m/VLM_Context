@@ -1,0 +1,6 @@
+{
+  "family": "classification",
+  "study": "core",
+  "task": "shapes4",
+  "arm": "frozen"
+}

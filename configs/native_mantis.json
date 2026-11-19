@@ -1,0 +1,7 @@
+{
+  "study": "native_probes",
+  "spec": "data/protocols/families/TIGER-Lab__Mantis-8B-Idefics2.json",
+  "episodes": "data/protocols/families/episodes.json.gz",
+  "task": "cifar4",
+  "family": "native_probes"
+}

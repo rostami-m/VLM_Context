@@ -1,0 +1,11 @@
+# Versions recorded in the accepted primary runtime (Python 3.12.14).
+# Install a torch build appropriate to your accelerator; numerical output may vary.
+torch==2.14.0
+transformers==4.49.0
+peft==0.21.0
+accelerate==1.15.0
+tokenizers==0.21.4
+safetensors==0.8.0
+datasets==5.0.1
+numpy==2.5.3
+Pillow==12.3.0
