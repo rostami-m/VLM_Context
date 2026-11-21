@@ -31,6 +31,9 @@ def main(argv=None):
     fetch.add_argument('--size', choices=['2B', '7B'], default='2B')
     regen = sub.add_parser('regenerate', help='Recompute numerical summaries and figures from the released evidence')
     regen.add_argument('--output', required=True)
+    regen.add_argument('--no-figures', action='store_true', help='Run all CPU statistical reductions without plots')
+    analysis = sub.add_parser('analyze', help='Recompute statistical estimates and intervals from saved per-example evidence')
+    analysis.add_argument('--output', required=True)
     args = parser.parse_args(argv)
     if args.command == 'run':
         config = read_json(args.config)
@@ -57,9 +60,12 @@ def main(argv=None):
         spec = read_json(source_path('configs/qwen2_snapshot.json' if args.size == '2B' else 'configs/qwen2_7b_snapshot.json'))
         path = snapshot_download(spec['model_id'], revision=spec['revision'], cache_dir=args.cache_dir)
         print(path)
+    elif args.command == 'analyze':
+        from .analysis import analyze
+        analyze(args.output)
     else:
         from .regenerate import regenerate
-        regenerate(args.output)
+        regenerate(args.output, figures=not args.no_figures)
 
 if __name__ == '__main__':
     main()

@@ -1,10 +1,9 @@
 """Regenerate manuscript numbers and plots from the bundled numerical evidence.
 
-This path uses no model, dataset download, fitting, or new bootstrap draws.
-Q05 cells are recomputed from per-image predictions and checked against the
-archived cells. Other tables reduce the retained cell/stream analyses; their
-saved uncertainty intervals are reproduced, not recomputed from missing raw
-model outputs. Every numeric input and generated table/plot is fingerprinted in manifest.json.
+This path uses no model, dataset download, or fitting. Saved per-example answers
+and scores are reduced on CPU, including paired image bootstrap draws with the
+recorded settings. Archived summaries serve as regression references. Every
+numeric input and generated table/plot is fingerprinted in manifest.json.
 """
 from collections import defaultdict
 from pathlib import Path
@@ -13,6 +12,7 @@ import hashlib
 import json
 import math
 import statistics
+import sys
 
 from .io import read_json, require, sha256, source_path
 
@@ -293,6 +293,8 @@ def build_tables(data):
         for cell in sorted(analysis['cells'].values(), key=lambda r: (r['condition'], r['k'])):
             tables['families'].append(dict(model=model.removesuffix(' analysis'), condition=cell['condition'], k=cell['k'],
                 accuracy_pct=_percent(cell['accuracy']['mean']), strict_invalid_pct=_percent(cell['strict_invalid_rate']),
+                strict_generation_accuracy_pct=_percent(cell['strict_generation_accuracy']),
+                exact_format_invalid_pct=_percent(cell['exact_format_invalid_rate']),
                 sum_mean_disagreement_pct=_percent(cell['sum_mean_disagreement_rate'])))
     tables['position_examples'] = [{key: row['display'][key] for key in
         ('freq_display', 'variant_display', 'query_display', 'support_display', 'donor_display', 'pred_display')}
@@ -425,9 +427,9 @@ def _plots(output, data, grouped):
 def regenerate(output, *, figures=True):
     """Create a fresh directory of table data, readable tables, plots and hashes.
 
-    Probabilities become percentages only in display tables. Saved intervals
-    retain their original image/replicate interpretation. ``figures=False`` is
-    useful for a standard-library-only numerical audit, with no matplotlib.
+    Probabilities become percentages only in display tables. Recomputed intervals
+    retain their original image/replicate interpretation. ``figures=False`` skips
+    matplotlib; statistical resampling still uses NumPy on CPU.
     """
     output = Path(output).resolve()
     require(not output.is_relative_to(source_path('data')), 'Output must not be inside the bundled evidence directory')
@@ -448,8 +450,26 @@ def regenerate(output, *, figures=True):
         path = source_path('data/paper/' + name)
         data[key] = read_json(path)
         inputs['data/paper/' + name] = {'sha256': sha256(path), 'bytes': path.stat().st_size}
-    data['q05_recomputed'] = aggregate_q05(data.pop('q05_per_image'))
+    from .q05_analysis import reconstruct_q05, verify_q05_outcomes
+    from .position_analysis import analyze_position, verify_position
+    from .native_analysis import recompute_native
+    from .analysis import analyze
+    output.mkdir(parents=True, exist_ok=True)
+    analysis_dir = output / 'analysis'
+    data.update(analyze(analysis_dir))
+    native = recompute_native()
+    data.update({key: native[key] for key in ('family_results', 'replication_results')})
+    for key in ('native_summary', 'native_validation'):
+        (analysis_dir / (key + '.json')).write_text(json.dumps(native[key], indent=2, sort_keys=True, allow_nan=False)+'\n')
+    position = analyze_position()
+    position_validation = verify_position(position, data['position_results'])
+    data['position_results'].update(position)
+    (analysis_dir / 'position_results.json').write_text(json.dumps(position, indent=2, sort_keys=True, allow_nan=False)+'\n')
+    q05_rows = reconstruct_q05()
+    q05_outcome_validation = verify_q05_outcomes(q05_rows, data.pop('q05_per_image'))
+    data['q05_recomputed'] = aggregate_q05(q05_rows)
     validation = verify_q05_metrics(data['q05_recomputed'], data['q05_metrics'])
+    validation.update(q05_outcome_validation)
     data['core_seed_accuracy'] = core_seed_rows(data['core_cells'], data['core_seed_cells'])
     tables, grouped = build_tables(data)
     tables_dir, figures_dir = output / 'tables', output / 'figures'
@@ -461,21 +481,36 @@ def regenerate(output, *, figures=True):
     if figures:
         figures_dir.mkdir()
         _plots(figures_dir, data, grouped)
-    scope = ('Q05 cells and confusion matrices are recomputed from all released per-image predictions. '
-             'Other tables use archived cell/stream analyses and existing paired intervals; no new '
-             'model inference, fitting, probability sampling or bootstrap draws occur. Repeated '
+    scope = ('Q05, native-family/replication and position predictions are recalculated from original '
+             'generated answers and complete candidate token scores. Core, baseline, open-task, '
+             'intervention and sequential analyses are rebuilt from released per-example records, '
+             'including image resampling with the recorded RNG/settings and calibration refits. '
+             'Archived summaries are checked as references; no model inference or fitting occurs. Repeated '
              'contexts are not independent query images. Candidate scoring and strict generation '
              'are separate. All intervals are descriptive for their recorded fixed panels. '
              'Both plots show retained cell means and recorded paired fitting/context seed traces. '
              'Tables reproduce numerical evidence in portable layouts, not journal pagination.')
-    manifest = {'schema_version': 1, 'scope': scope, 'inputs': inputs,
+    for path in sorted(source_path('data/analysis').rglob('*')):
+        if path.is_file():
+            inputs['data/analysis/' + str(path.relative_to(source_path('data/analysis')))] = {
+                'sha256': sha256(path), 'bytes': path.stat().st_size}
+    manifest = {'schema_version': 2, 'scope': scope, 'inputs': inputs,
                 'q05_validation': validation,
+                'native_validation': native['native_validation'],
+                'position_validation': position_validation,
+                'statistical_analysis_validation': data.get('analysis_validation'),
                 'core_seed_validation': {'aggregate_cells': len(data['core_cells']),
                                          'seed_accuracy_rows': len(data['core_seed_accuracy']),
                                          'all_means_match': True},
                 'tables': {name: len(rows) for name, rows in tables.items()},
                 'figures_generated': bool(figures),
                 'code_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest()}
+    import numpy
+    manifest['analysis_runtime'] = {'python': sys.version, 'numpy': numpy.__version__}
+    manifest['analysis_code_sha256'] = {
+        str(path.relative_to(source_path('vlm_context'))): sha256(path)
+        for path in sorted(source_path('vlm_context').glob('*.py'))
+        if 'analysis' in path.name or path.name in ('regenerate.py', 'protocol.py', 'native_families.py', 'open_tasks.py', 'io.py')}
     manifest['outputs'] = {str(path.relative_to(output)): {'sha256': sha256(path), 'bytes': path.stat().st_size}
                            for path in sorted(output.rglob('*')) if path.is_file()}
     (output / 'manifest.json').write_text(json.dumps(manifest, indent=2, sort_keys=True, allow_nan=False) + '\n')

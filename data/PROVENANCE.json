@@ -1,8 +1,8 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "created": "2026-11-19",
-  "purpose": "Scientific values and frozen episode schedules from accepted manuscript experiments. No model inference, fitting, new bootstrap sampling or outcome-dependent selection occurred.",
-  "sanitation": "Removed operational host/reviewer/runtime-path metadata; replaced original user-specific absolute paths with logical archive/environment paths. Numeric and boolean values in retained scientific fields are checked unchanged. IDs, content hashes, native prompts, labels and query/support order are preserved. Original source hashes refer to private archive bytes; sanitized outputs have separate hashes. No images, model weights, review letter, private reviewer instructions or credentials are included.",
+  "purpose": "Retained numerical evidence, frozen protocols and original per-example records. Public CPU reducers recalculate predictions and uncertainty with the recorded settings. No new model inference, fitting, or outcome-dependent query selection.",
+  "sanitation": "Original source-record hashes are preserved in the analysis exports or their manifests. Operational host/credential/approval metadata is excluded from new exports. Normalized generation diagnostics are explicitly derived; original likelihood quantities remain unchanged. No dataset images, model weights, private reviewer material or credentials are included.",
   "files": [
     {
       "output": "data/paper/core_seed_cells.json.gz",
@@ -86,17 +86,20 @@
       "source_id": "replication_results.json",
       "source_sha256": "5add3df8275a169fe920816130f5f9057123768432c03e4cc96f9fb4e23ea2d9",
       "selected_payload_sha256": "8de5f3fcf32ca21de2bfc9707472c2852da94802da2fdfd49edf0e52dd0deebd",
-      "output_sha256": "068186274a0b44789ce8c8f4a32cf666ed431c4d6865776336cc4a8c6d3138f9",
-      "decompressed_sha256": "068186274a0b44789ce8c8f4a32cf666ed431c4d6865776336cc4a8c6d3138f9",
-      "bytes": 108667,
-      "numeric_content_unchanged": true,
+      "output_sha256": "32a4d72c4aa1c84c99ea9abe9091ca04431f7bf34c922b17462fa6bd9042136e",
+      "decompressed_sha256": "32a4d72c4aa1c84c99ea9abe9091ca04431f7bf34c922b17462fa6bd9042136e",
+      "bytes": 119801,
+      "numeric_content_unchanged": false,
       "selected_top_level_keys": [
         "D14CPU11_OpenGVLab__InternVL3-2B-hf_images",
         "D14CPU11_OpenGVLab__InternVL3-2B-hf_seeds",
         "D14CPU11_Qwen__Qwen2_5-VL-3B-Instruct_images",
         "D14CPU11_Qwen__Qwen2_5-VL-3B-Instruct_seeds"
       ],
-      "records": null
+      "records": null,
+      "previous_output_sha256": "068186274a0b44789ce8c8f4a32cf666ed431c4d6865776336cc4a8c6d3138f9",
+      "derivation": "Shared normalized whole-label parsing of the original generated answers; exact-format compliance retained separately. All original likelihood estimates and intervals checked unchanged by vlm_context.native_analysis.",
+      "analysis_inputs": "data/analysis/native_manifest.json"
     },
     {
       "output": "data/paper/intervention_results.json.gz",
@@ -156,16 +159,19 @@
       "source_id": "family_results.json",
       "source_sha256": "56ebd7db640cd2b0bc2be9f08b14a62229ff4546b853ced24c94a01db6db0fe0",
       "selected_payload_sha256": "7db0ea29a41d8d2a719cb7b4ce0f2314857e2934d5e5aa4d9da4597050004693",
-      "output_sha256": "3731a1e487da8df3586af7bd3b832a42c2a92e92fb7afd807d81174bd0cf60da",
-      "decompressed_sha256": "3731a1e487da8df3586af7bd3b832a42c2a92e92fb7afd807d81174bd0cf60da",
-      "bytes": 9988,
-      "numeric_content_unchanged": true,
+      "output_sha256": "cb02503e4264341da7a6e6a3aa39749ece5a67c91632ee924b00c0a8c8b1beb3",
+      "decompressed_sha256": "cb02503e4264341da7a6e6a3aa39749ece5a67c91632ee924b00c0a8c8b1beb3",
+      "bytes": 16050,
+      "numeric_content_unchanged": false,
       "selected_top_level_keys": [
         "IDEFICS2 analysis",
         "Mantis analysis",
         "OpenFlamingo analysis"
       ],
-      "records": null
+      "records": null,
+      "previous_output_sha256": "3731a1e487da8df3586af7bd3b832a42c2a92e92fb7afd807d81174bd0cf60da",
+      "derivation": "Shared normalized whole-label parsing of the original generated answers; exact-format compliance retained separately. All original likelihood estimates and intervals checked unchanged by vlm_context.native_analysis.",
+      "analysis_inputs": "data/analysis/native_manifest.json"
     },
     {
       "output": "data/paper/position_results.json",
@@ -248,17 +254,20 @@
       "source_id": "replication_diagnostics.json",
       "source_sha256": "5add3df8275a169fe920816130f5f9057123768432c03e4cc96f9fb4e23ea2d9",
       "selected_payload_sha256": "8de5f3fcf32ca21de2bfc9707472c2852da94802da2fdfd49edf0e52dd0deebd",
-      "output_sha256": "068186274a0b44789ce8c8f4a32cf666ed431c4d6865776336cc4a8c6d3138f9",
-      "decompressed_sha256": "068186274a0b44789ce8c8f4a32cf666ed431c4d6865776336cc4a8c6d3138f9",
-      "bytes": 108667,
-      "numeric_content_unchanged": true,
+      "output_sha256": "32a4d72c4aa1c84c99ea9abe9091ca04431f7bf34c922b17462fa6bd9042136e",
+      "decompressed_sha256": "32a4d72c4aa1c84c99ea9abe9091ca04431f7bf34c922b17462fa6bd9042136e",
+      "bytes": 119801,
+      "numeric_content_unchanged": false,
       "selected_top_level_keys": [
         "D14CPU11_OpenGVLab__InternVL3-2B-hf_images",
         "D14CPU11_OpenGVLab__InternVL3-2B-hf_seeds",
         "D14CPU11_Qwen__Qwen2_5-VL-3B-Instruct_images",
         "D14CPU11_Qwen__Qwen2_5-VL-3B-Instruct_seeds"
       ],
-      "records": null
+      "records": null,
+      "previous_output_sha256": "068186274a0b44789ce8c8f4a32cf666ed431c4d6865776336cc4a8c6d3138f9",
+      "derivation": "Shared normalized whole-label parsing of the original generated answers; exact-format compliance retained separately. All original likelihood estimates and intervals checked unchanged by vlm_context.native_analysis.",
+      "analysis_inputs": "data/analysis/native_manifest.json"
     },
     {
       "output": "data/paper/InternVL3-2B_native_config.json",
@@ -290,16 +299,19 @@
       "source_id": "family_diagnostics.json",
       "source_sha256": "56ebd7db640cd2b0bc2be9f08b14a62229ff4546b853ced24c94a01db6db0fe0",
       "selected_payload_sha256": "7db0ea29a41d8d2a719cb7b4ce0f2314857e2934d5e5aa4d9da4597050004693",
-      "output_sha256": "3731a1e487da8df3586af7bd3b832a42c2a92e92fb7afd807d81174bd0cf60da",
-      "decompressed_sha256": "3731a1e487da8df3586af7bd3b832a42c2a92e92fb7afd807d81174bd0cf60da",
-      "bytes": 9988,
-      "numeric_content_unchanged": true,
+      "output_sha256": "cb02503e4264341da7a6e6a3aa39749ece5a67c91632ee924b00c0a8c8b1beb3",
+      "decompressed_sha256": "cb02503e4264341da7a6e6a3aa39749ece5a67c91632ee924b00c0a8c8b1beb3",
+      "bytes": 16050,
+      "numeric_content_unchanged": false,
       "selected_top_level_keys": [
         "IDEFICS2 analysis",
         "Mantis analysis",
         "OpenFlamingo analysis"
       ],
-      "records": null
+      "records": null,
+      "previous_output_sha256": "3731a1e487da8df3586af7bd3b832a42c2a92e92fb7afd807d81174bd0cf60da",
+      "derivation": "Shared normalized whole-label parsing of the original generated answers; exact-format compliance retained separately. All original likelihood estimates and intervals checked unchanged by vlm_context.native_analysis.",
+      "analysis_inputs": "data/analysis/native_manifest.json"
     },
     {
       "output": "data/paper/adapter_recipes.json.gz",
@@ -468,10 +480,10 @@
       "source_id": "Mantis_cifar4_remap_K16.json",
       "source_sha256": "b668c98ed9460b099bcb38fd0941f75248a68e4861e8744644c9a82f67287bd1",
       "selected_payload_sha256": "0cf377f9ec378da3882e81bcdb7f2dec8062dd818a2ff562e62463ab5104f5b2",
-      "output_sha256": "01e0bdf239d7adc753a5963102a7122439bd1c85fd3aa5d222fe209c2e3cc33b",
-      "decompressed_sha256": "01e0bdf239d7adc753a5963102a7122439bd1c85fd3aa5d222fe209c2e3cc33b",
-      "bytes": 13958,
-      "numeric_content_unchanged": true,
+      "output_sha256": "f20c06a6d89617776ffa6b718532b580f21afc2dbdf656076e0cff02e83063a8",
+      "decompressed_sha256": "f20c06a6d89617776ffa6b718532b580f21afc2dbdf656076e0cff02e83063a8",
+      "bytes": 14375,
+      "numeric_content_unchanged": false,
       "selected_top_level_keys": [
         "episode",
         "episode_sha256",
@@ -480,17 +492,20 @@
         "status",
         "source"
       ],
-      "records": null
+      "records": null,
+      "previous_output_sha256": "01e0bdf239d7adc753a5963102a7122439bd1c85fd3aa5d222fe209c2e3cc33b",
+      "derivation": "Shared normalized whole-label parsing of the original generated answers; exact-format compliance retained separately. All original likelihood estimates and intervals checked unchanged by vlm_context.native_analysis.",
+      "analysis_inputs": "data/analysis/native_manifest.json"
     },
     {
       "output": "data/paper/prompts/IDEFICS2_cifar4_standard_K0.json",
       "source_id": "IDEFICS2_cifar4_standard_K0.json",
       "source_sha256": "a6c4b16685971b09dcba85ff6948254660e80ecf7e9671d0890186e4c5d04cf2",
       "selected_payload_sha256": "efe9642713e0b1d943facf4139ec86805400ef647bf9ef7abdb1bb6a7b7001d1",
-      "output_sha256": "86560f92f6ee806c4079019cb8144b6276892b20896d828c5d69ac2921623c1c",
-      "decompressed_sha256": "86560f92f6ee806c4079019cb8144b6276892b20896d828c5d69ac2921623c1c",
-      "bytes": 4885,
-      "numeric_content_unchanged": true,
+      "output_sha256": "64eaaa5d29b770fcf6708290acff24437170136c7a6ac4834b1d365f07ca2a23",
+      "decompressed_sha256": "64eaaa5d29b770fcf6708290acff24437170136c7a6ac4834b1d365f07ca2a23",
+      "bytes": 5302,
+      "numeric_content_unchanged": false,
       "selected_top_level_keys": [
         "episode",
         "episode_sha256",
@@ -499,17 +514,20 @@
         "status",
         "source"
       ],
-      "records": null
+      "records": null,
+      "previous_output_sha256": "86560f92f6ee806c4079019cb8144b6276892b20896d828c5d69ac2921623c1c",
+      "derivation": "Shared normalized whole-label parsing of the original generated answers; exact-format compliance retained separately. All original likelihood estimates and intervals checked unchanged by vlm_context.native_analysis.",
+      "analysis_inputs": "data/analysis/native_manifest.json"
     },
     {
       "output": "data/paper/prompts/OpenFlamingo_cifar4_remap_K16.json",
       "source_id": "OpenFlamingo_cifar4_remap_K16.json",
       "source_sha256": "23055f09d9c032d91a073923cd6badd61ee60032f775cff85b8a9795f56fa22d",
       "selected_payload_sha256": "e23d82898dfe09e415bde76d10cfb2ac2e03212336ec543b3fc12506366f82bd",
-      "output_sha256": "59e418740dfd2bccaa023050666b853c1f7d4ebfbef6f9a1eb67cdaffdbe9585",
-      "decompressed_sha256": "59e418740dfd2bccaa023050666b853c1f7d4ebfbef6f9a1eb67cdaffdbe9585",
-      "bytes": 7816,
-      "numeric_content_unchanged": true,
+      "output_sha256": "8c8471d78e469133d3b1acbbc8c357dab2a8355ee17c97b365fffed2195cebac",
+      "decompressed_sha256": "8c8471d78e469133d3b1acbbc8c357dab2a8355ee17c97b365fffed2195cebac",
+      "bytes": 8236,
+      "numeric_content_unchanged": false,
       "selected_top_level_keys": [
         "episode",
         "episode_sha256",
@@ -518,17 +536,20 @@
         "status",
         "source"
       ],
-      "records": null
+      "records": null,
+      "previous_output_sha256": "59e418740dfd2bccaa023050666b853c1f7d4ebfbef6f9a1eb67cdaffdbe9585",
+      "derivation": "Shared normalized whole-label parsing of the original generated answers; exact-format compliance retained separately. All original likelihood estimates and intervals checked unchanged by vlm_context.native_analysis.",
+      "analysis_inputs": "data/analysis/native_manifest.json"
     },
     {
       "output": "data/paper/prompts/Qwen2.5-VL-3B_shapes_standard_K0.json",
       "source_id": "Qwen2.5-VL-3B_shapes_standard_K0.json",
       "source_sha256": "1a4575136e6f7f0191c6b6e650445837f4c91409850f654994bd2b0a7c35c49f",
       "selected_payload_sha256": "3c1adb3c74aeff163abdd7016693413fdc9a137f8c5b9ca1224ea85c014e6199",
-      "output_sha256": "afa989a2cca45d94ac3ea086ca3e89add620ffacc8feda02852167ba2f1cdb93",
-      "decompressed_sha256": "afa989a2cca45d94ac3ea086ca3e89add620ffacc8feda02852167ba2f1cdb93",
-      "bytes": 3127,
-      "numeric_content_unchanged": true,
+      "output_sha256": "5dca00423c0394875afae0d19decdc64365f35a21535050338121af77303ef71",
+      "decompressed_sha256": "5dca00423c0394875afae0d19decdc64365f35a21535050338121af77303ef71",
+      "bytes": 3544,
+      "numeric_content_unchanged": false,
       "selected_top_level_keys": [
         "episode",
         "episode_sha256",
@@ -537,7 +558,10 @@
         "status",
         "source"
       ],
-      "records": null
+      "records": null,
+      "previous_output_sha256": "afa989a2cca45d94ac3ea086ca3e89add620ffacc8feda02852167ba2f1cdb93",
+      "derivation": "Shared normalized whole-label parsing of the original generated answers; exact-format compliance retained separately. All original likelihood estimates and intervals checked unchanged by vlm_context.native_analysis.",
+      "analysis_inputs": "data/analysis/native_manifest.json"
     },
     {
       "output": "data/paper/prompts/Qwen2-VL-2B_shapes4_standard_K1.json",
@@ -594,10 +618,10 @@
       "source_id": "Qwen2.5-VL-3B_shapes_standard_K16.json",
       "source_sha256": "0e454d256f22e5723fa802cca03d15837af3b1e534ccd7d71543d92ff2a6ac71",
       "selected_payload_sha256": "08c5b67a9c8e89782e87ddf6969dbe319aaa30a3c03a823682c99728fdef6c26",
-      "output_sha256": "746c1bce992e03889bca85bc175bc13107c6b92989b997d27e4d6569358f90b8",
-      "decompressed_sha256": "746c1bce992e03889bca85bc175bc13107c6b92989b997d27e4d6569358f90b8",
-      "bytes": 9473,
-      "numeric_content_unchanged": true,
+      "output_sha256": "9cff3645ebc1f9191bce669a479c2d394dd69db19abca3ab76c60ae819097554",
+      "decompressed_sha256": "9cff3645ebc1f9191bce669a479c2d394dd69db19abca3ab76c60ae819097554",
+      "bytes": 9890,
+      "numeric_content_unchanged": false,
       "selected_top_level_keys": [
         "episode",
         "episode_sha256",
@@ -606,17 +630,20 @@
         "status",
         "source"
       ],
-      "records": null
+      "records": null,
+      "previous_output_sha256": "746c1bce992e03889bca85bc175bc13107c6b92989b997d27e4d6569358f90b8",
+      "derivation": "Shared normalized whole-label parsing of the original generated answers; exact-format compliance retained separately. All original likelihood estimates and intervals checked unchanged by vlm_context.native_analysis.",
+      "analysis_inputs": "data/analysis/native_manifest.json"
     },
     {
       "output": "data/paper/prompts/IDEFICS2_cifar4_standard_K16.json",
       "source_id": "IDEFICS2_cifar4_standard_K16.json",
       "source_sha256": "52eef186672ddca74242133854bbf8cd188414af66f79352dc8b1c3da56bc9b4",
       "selected_payload_sha256": "fbbea9c37e1a5047f6dfdcff7a475587ddfb8d86d45978b5831444faa0ca076e",
-      "output_sha256": "4b42996807f3223fb0a11263a68db9188dffa74fb0784a54176ad443398fb8d6",
-      "decompressed_sha256": "4b42996807f3223fb0a11263a68db9188dffa74fb0784a54176ad443398fb8d6",
-      "bytes": 40333,
-      "numeric_content_unchanged": true,
+      "output_sha256": "275b4e4d00b9454e1a4be8a676c2dee668c9b3544c69c5ff19e45a8fc49ce3f2",
+      "decompressed_sha256": "275b4e4d00b9454e1a4be8a676c2dee668c9b3544c69c5ff19e45a8fc49ce3f2",
+      "bytes": 40750,
+      "numeric_content_unchanged": false,
       "selected_top_level_keys": [
         "episode",
         "episode_sha256",
@@ -625,17 +652,20 @@
         "status",
         "source"
       ],
-      "records": null
+      "records": null,
+      "previous_output_sha256": "4b42996807f3223fb0a11263a68db9188dffa74fb0784a54176ad443398fb8d6",
+      "derivation": "Shared normalized whole-label parsing of the original generated answers; exact-format compliance retained separately. All original likelihood estimates and intervals checked unchanged by vlm_context.native_analysis.",
+      "analysis_inputs": "data/analysis/native_manifest.json"
     },
     {
       "output": "data/paper/prompts/IDEFICS2_cifar4_remap_K16.json",
       "source_id": "IDEFICS2_cifar4_remap_K16.json",
       "source_sha256": "bf5cca2b7b07bcd2749d66d059fd9e21a5a6502429526858a0502d6b7ff12754",
       "selected_payload_sha256": "c6daa26bc3b940e194706024965185dbe579f56e8cdbce11f4f98f2fb9b2d6b1",
-      "output_sha256": "bb3383c1015837b2e8f4f52bd7cb47e2c6415f156076dae910f99d83fe53b80a",
-      "decompressed_sha256": "bb3383c1015837b2e8f4f52bd7cb47e2c6415f156076dae910f99d83fe53b80a",
-      "bytes": 40336,
-      "numeric_content_unchanged": true,
+      "output_sha256": "6893b824712c55c43e4bce0178066e4a5d74f4232890896139206d3fe60a309d",
+      "decompressed_sha256": "6893b824712c55c43e4bce0178066e4a5d74f4232890896139206d3fe60a309d",
+      "bytes": 40753,
+      "numeric_content_unchanged": false,
       "selected_top_level_keys": [
         "episode",
         "episode_sha256",
@@ -644,17 +674,20 @@
         "status",
         "source"
       ],
-      "records": null
+      "records": null,
+      "previous_output_sha256": "bb3383c1015837b2e8f4f52bd7cb47e2c6415f156076dae910f99d83fe53b80a",
+      "derivation": "Shared normalized whole-label parsing of the original generated answers; exact-format compliance retained separately. All original likelihood estimates and intervals checked unchanged by vlm_context.native_analysis.",
+      "analysis_inputs": "data/analysis/native_manifest.json"
     },
     {
       "output": "data/paper/prompts/Mantis_cifar4_remap_K0.json",
       "source_id": "Mantis_cifar4_remap_K0.json",
       "source_sha256": "326d3ddc6678704ded756e7a2734ce8b89f0069afede71ed372b80501f8e4a68",
       "selected_payload_sha256": "a3d2c42367afec1ab2bfd05438862585c8ffdc57d7ef6920650458bbf45fde9d",
-      "output_sha256": "b6b1d83f5274b0c5de140f07863a8789d6c8475855f644dafb0a10f59aa023a0",
-      "decompressed_sha256": "b6b1d83f5274b0c5de140f07863a8789d6c8475855f644dafb0a10f59aa023a0",
-      "bytes": 3532,
-      "numeric_content_unchanged": true,
+      "output_sha256": "45b3d921307a175245a65a0365c84c34651c635449833904716c9fcf16d904c5",
+      "decompressed_sha256": "45b3d921307a175245a65a0365c84c34651c635449833904716c9fcf16d904c5",
+      "bytes": 3949,
+      "numeric_content_unchanged": false,
       "selected_top_level_keys": [
         "episode",
         "episode_sha256",
@@ -663,7 +696,10 @@
         "status",
         "source"
       ],
-      "records": null
+      "records": null,
+      "previous_output_sha256": "b6b1d83f5274b0c5de140f07863a8789d6c8475855f644dafb0a10f59aa023a0",
+      "derivation": "Shared normalized whole-label parsing of the original generated answers; exact-format compliance retained separately. All original likelihood estimates and intervals checked unchanged by vlm_context.native_analysis.",
+      "analysis_inputs": "data/analysis/native_manifest.json"
     },
     {
       "output": "data/paper/prompts/Qwen2-VL-2B_shapes4_episode_remap_K2.json",
@@ -895,10 +931,10 @@
       "source_id": "InternVL3-2B_shapes_remap_K0.json",
       "source_sha256": "5431aa90e60edd716971af4e42b6366f420bbb3b458ebfe70c80a29e130e9739",
       "selected_payload_sha256": "f0c6b25d8d0688ccdf27eb19f46e84d884c3c98f4b911dc110778255b10afc3b",
-      "output_sha256": "beb9be3478b8b17e2dc224e05e5f8cfd2021e265990b17a24334e0c607be3881",
-      "decompressed_sha256": "beb9be3478b8b17e2dc224e05e5f8cfd2021e265990b17a24334e0c607be3881",
-      "bytes": 4713,
-      "numeric_content_unchanged": true,
+      "output_sha256": "c19655c11774d66f0ee872cab965b7cb0ca544a9727e199f18aab22c5c4f4494",
+      "decompressed_sha256": "c19655c11774d66f0ee872cab965b7cb0ca544a9727e199f18aab22c5c4f4494",
+      "bytes": 5130,
+      "numeric_content_unchanged": false,
       "selected_top_level_keys": [
         "episode",
         "episode_sha256",
@@ -907,17 +943,20 @@
         "status",
         "source"
       ],
-      "records": null
+      "records": null,
+      "previous_output_sha256": "beb9be3478b8b17e2dc224e05e5f8cfd2021e265990b17a24334e0c607be3881",
+      "derivation": "Shared normalized whole-label parsing of the original generated answers; exact-format compliance retained separately. All original likelihood estimates and intervals checked unchanged by vlm_context.native_analysis.",
+      "analysis_inputs": "data/analysis/native_manifest.json"
     },
     {
       "output": "data/paper/prompts/InternVL3-2B_shapes_standard_K0.json",
       "source_id": "InternVL3-2B_shapes_standard_K0.json",
       "source_sha256": "353c73e6264eb3e83ae45c5c7334b1a730cf310e823ce8042966777d3d6d79b7",
       "selected_payload_sha256": "a47529cdb241408196470d35b913faf134b4d29200787f19fe9dad9f43ff607e",
-      "output_sha256": "516dbee70ede13b429df91e94c9b15ada1287c812594b5cecfb2092d6e556495",
-      "decompressed_sha256": "516dbee70ede13b429df91e94c9b15ada1287c812594b5cecfb2092d6e556495",
-      "bytes": 4657,
-      "numeric_content_unchanged": true,
+      "output_sha256": "acef3ae566fbce88ac2377c05587f275be02f12939b907ddbf91be65a84b928d",
+      "decompressed_sha256": "acef3ae566fbce88ac2377c05587f275be02f12939b907ddbf91be65a84b928d",
+      "bytes": 5074,
+      "numeric_content_unchanged": false,
       "selected_top_level_keys": [
         "episode",
         "episode_sha256",
@@ -926,7 +965,10 @@
         "status",
         "source"
       ],
-      "records": null
+      "records": null,
+      "previous_output_sha256": "516dbee70ede13b429df91e94c9b15ada1287c812594b5cecfb2092d6e556495",
+      "derivation": "Shared normalized whole-label parsing of the original generated answers; exact-format compliance retained separately. All original likelihood estimates and intervals checked unchanged by vlm_context.native_analysis.",
+      "analysis_inputs": "data/analysis/native_manifest.json"
     },
     {
       "output": "data/paper/prompts/Qwen2-VL-2B_shapes4_standard_K16.json",
@@ -958,10 +1000,10 @@
       "source_id": "OpenFlamingo_cifar4_standard_K16.json",
       "source_sha256": "dbabd249a0a2a45b02f488465218e0a94fbd19644d1ab5b22332219e1a333fbd",
       "selected_payload_sha256": "be28405c80b6ea073eba170be9160c0889fc990f3eca734f5a23e33cb1ed6cee",
-      "output_sha256": "e496c1aa9750abb104815eb65c68c7aac63a123d0be34490ea146797f12d6aa5",
-      "decompressed_sha256": "e496c1aa9750abb104815eb65c68c7aac63a123d0be34490ea146797f12d6aa5",
-      "bytes": 7669,
-      "numeric_content_unchanged": true,
+      "output_sha256": "4dc119265e91f7e8b14a3a157b7496d38a815ef99e48f1a89014bdfbc44144ef",
+      "decompressed_sha256": "4dc119265e91f7e8b14a3a157b7496d38a815ef99e48f1a89014bdfbc44144ef",
+      "bytes": 8089,
+      "numeric_content_unchanged": false,
       "selected_top_level_keys": [
         "episode",
         "episode_sha256",
@@ -970,7 +1012,10 @@
         "status",
         "source"
       ],
-      "records": null
+      "records": null,
+      "previous_output_sha256": "e496c1aa9750abb104815eb65c68c7aac63a123d0be34490ea146797f12d6aa5",
+      "derivation": "Shared normalized whole-label parsing of the original generated answers; exact-format compliance retained separately. All original likelihood estimates and intervals checked unchanged by vlm_context.native_analysis.",
+      "analysis_inputs": "data/analysis/native_manifest.json"
     },
     {
       "output": "data/paper/prompts/Qwen2-VL-2B_cifar4_episode_remap_K2.json",
@@ -1052,10 +1097,10 @@
       "source_id": "Mantis_cifar4_standard_K16.json",
       "source_sha256": "aa390b90aecb5f6df05dcb897459b38f83175727972872a999f9835de930fe0a",
       "selected_payload_sha256": "537951cc0f3c4ddecf92831451a1b1e3306404b7f936f937d13d1faa0e91f48c",
-      "output_sha256": "0012dc59e1a6a6548c1579b999eed0465b820d8b198c1b80b98856c146b33af0",
-      "decompressed_sha256": "0012dc59e1a6a6548c1579b999eed0465b820d8b198c1b80b98856c146b33af0",
-      "bytes": 13948,
-      "numeric_content_unchanged": true,
+      "output_sha256": "5e16b003d697f8ace5ff3d0214d1467849240482b22df33f42cdacd5627e1623",
+      "decompressed_sha256": "5e16b003d697f8ace5ff3d0214d1467849240482b22df33f42cdacd5627e1623",
+      "bytes": 14365,
+      "numeric_content_unchanged": false,
       "selected_top_level_keys": [
         "episode",
         "episode_sha256",
@@ -1064,17 +1109,20 @@
         "status",
         "source"
       ],
-      "records": null
+      "records": null,
+      "previous_output_sha256": "0012dc59e1a6a6548c1579b999eed0465b820d8b198c1b80b98856c146b33af0",
+      "derivation": "Shared normalized whole-label parsing of the original generated answers; exact-format compliance retained separately. All original likelihood estimates and intervals checked unchanged by vlm_context.native_analysis.",
+      "analysis_inputs": "data/analysis/native_manifest.json"
     },
     {
       "output": "data/paper/prompts/Qwen2.5-VL-3B_shapes_remap_K0.json",
       "source_id": "Qwen2.5-VL-3B_shapes_remap_K0.json",
       "source_sha256": "98b2426dc55046b50646bc64dd307d9d2970c66d7f19f67fb31f2319412d0aae",
       "selected_payload_sha256": "4d3653029342637a224bd5a2988112dcc63346c9c9294a5a78ae74028b75c03e",
-      "output_sha256": "f2ed17f12fad04d722b69a604d0dd51886b079e0af08edfcac977591d1f7f4d5",
-      "decompressed_sha256": "f2ed17f12fad04d722b69a604d0dd51886b079e0af08edfcac977591d1f7f4d5",
-      "bytes": 3208,
-      "numeric_content_unchanged": true,
+      "output_sha256": "60e2af4a9b9a5b2ff7870c45f4e8e405f4b24d38a3ce550c2a3bd07aac9eed9b",
+      "decompressed_sha256": "60e2af4a9b9a5b2ff7870c45f4e8e405f4b24d38a3ce550c2a3bd07aac9eed9b",
+      "bytes": 3625,
+      "numeric_content_unchanged": false,
       "selected_top_level_keys": [
         "episode",
         "episode_sha256",
@@ -1083,17 +1131,20 @@
         "status",
         "source"
       ],
-      "records": null
+      "records": null,
+      "previous_output_sha256": "f2ed17f12fad04d722b69a604d0dd51886b079e0af08edfcac977591d1f7f4d5",
+      "derivation": "Shared normalized whole-label parsing of the original generated answers; exact-format compliance retained separately. All original likelihood estimates and intervals checked unchanged by vlm_context.native_analysis.",
+      "analysis_inputs": "data/analysis/native_manifest.json"
     },
     {
       "output": "data/paper/prompts/Qwen2.5-VL-3B_shapes_remap_K16.json",
       "source_id": "Qwen2.5-VL-3B_shapes_remap_K16.json",
       "source_sha256": "da87729d3334abeab7db734518a02e9c34dfedf673dcf662cafd5eb5a99d4d3e",
       "selected_payload_sha256": "a9a6d9891ba09497e0b95e96e2626331f2897a041d1e1f1f4ecbe02855dd95da",
-      "output_sha256": "f547892b22327076fdb6056bdce6a35657f80e2976062d0f7f3e4e48db404943",
-      "decompressed_sha256": "f547892b22327076fdb6056bdce6a35657f80e2976062d0f7f3e4e48db404943",
-      "bytes": 9557,
-      "numeric_content_unchanged": true,
+      "output_sha256": "1c290160a26b45745c360b568c400737bc1bc85eb6a943a3e518ba4b29a95263",
+      "decompressed_sha256": "1c290160a26b45745c360b568c400737bc1bc85eb6a943a3e518ba4b29a95263",
+      "bytes": 9974,
+      "numeric_content_unchanged": false,
       "selected_top_level_keys": [
         "episode",
         "episode_sha256",
@@ -1102,7 +1153,10 @@
         "status",
         "source"
       ],
-      "records": null
+      "records": null,
+      "previous_output_sha256": "f547892b22327076fdb6056bdce6a35657f80e2976062d0f7f3e4e48db404943",
+      "derivation": "Shared normalized whole-label parsing of the original generated answers; exact-format compliance retained separately. All original likelihood estimates and intervals checked unchanged by vlm_context.native_analysis.",
+      "analysis_inputs": "data/analysis/native_manifest.json"
     },
     {
       "output": "data/paper/prompts/Qwen2-VL-2B_cifar4_episode_remap_K16.json",
@@ -1159,10 +1213,10 @@
       "source_id": "InternVL3-2B_shapes_remap_K16.json",
       "source_sha256": "a6e5684a32cca73da3a7690e44cf3ba09db27a1dbdbc4b50b46788de0498d054",
       "selected_payload_sha256": "5bf8509c4596c44768f51282aa18f5af059c1009b30df0be8abcd9ce5afe23b8",
-      "output_sha256": "cbf2d868eed77f0e9b6835e17fa126df57d80a693ef30210aa8eec634cae3e56",
-      "decompressed_sha256": "cbf2d868eed77f0e9b6835e17fa126df57d80a693ef30210aa8eec634cae3e56",
-      "bytes": 37580,
-      "numeric_content_unchanged": true,
+      "output_sha256": "0808d478cbcdf8c3dc057a578780b1a67cca10c90028a6d0910c3fa2d1b6ddb5",
+      "decompressed_sha256": "0808d478cbcdf8c3dc057a578780b1a67cca10c90028a6d0910c3fa2d1b6ddb5",
+      "bytes": 37997,
+      "numeric_content_unchanged": false,
       "selected_top_level_keys": [
         "episode",
         "episode_sha256",
@@ -1171,7 +1225,10 @@
         "status",
         "source"
       ],
-      "records": null
+      "records": null,
+      "previous_output_sha256": "cbf2d868eed77f0e9b6835e17fa126df57d80a693ef30210aa8eec634cae3e56",
+      "derivation": "Shared normalized whole-label parsing of the original generated answers; exact-format compliance retained separately. All original likelihood estimates and intervals checked unchanged by vlm_context.native_analysis.",
+      "analysis_inputs": "data/analysis/native_manifest.json"
     },
     {
       "output": "data/paper/prompts/Qwen2-VL-2B_cifar4_standard_K1.json",
@@ -1203,10 +1260,10 @@
       "source_id": "IDEFICS2_cifar4_remap_K0.json",
       "source_sha256": "99e15f87fdfca711a42c4cd213d313d426ba8a3b15d9dfd0601b94fbfe4acf28",
       "selected_payload_sha256": "722941780b522b971b721e27d283ab72f32dcbbbdfa2da336aa5f1322c1e0123",
-      "output_sha256": "c93905cc70f67001c260ce54a5c764bf2ee8616e0a4192b4391b54c23d5d0108",
-      "decompressed_sha256": "c93905cc70f67001c260ce54a5c764bf2ee8616e0a4192b4391b54c23d5d0108",
-      "bytes": 4906,
-      "numeric_content_unchanged": true,
+      "output_sha256": "17a80e7a69bbd5acf65a5825888d2feb27a7396f5923269bbeef4099f9930cc0",
+      "decompressed_sha256": "17a80e7a69bbd5acf65a5825888d2feb27a7396f5923269bbeef4099f9930cc0",
+      "bytes": 5323,
+      "numeric_content_unchanged": false,
       "selected_top_level_keys": [
         "episode",
         "episode_sha256",
@@ -1215,7 +1272,10 @@
         "status",
         "source"
       ],
-      "records": null
+      "records": null,
+      "previous_output_sha256": "c93905cc70f67001c260ce54a5c764bf2ee8616e0a4192b4391b54c23d5d0108",
+      "derivation": "Shared normalized whole-label parsing of the original generated answers; exact-format compliance retained separately. All original likelihood estimates and intervals checked unchanged by vlm_context.native_analysis.",
+      "analysis_inputs": "data/analysis/native_manifest.json"
     },
     {
       "output": "data/paper/prompts/Qwen2-VL-2B_shapes4_episode_remap_K16.json",
@@ -1297,10 +1357,10 @@
       "source_id": "Mantis_cifar4_standard_K0.json",
       "source_sha256": "821360e1c41a173387fb85213b63f83abb265962172c5620a07a5f8b76c760fd",
       "selected_payload_sha256": "0016800a324010585f28a35e5b172b0a98363570703cdbd1c88ffe467e530549",
-      "output_sha256": "a03199013524b5ae31a79837825a910cc12a86945ac379bf04d50453f0056162",
-      "decompressed_sha256": "a03199013524b5ae31a79837825a910cc12a86945ac379bf04d50453f0056162",
-      "bytes": 3481,
-      "numeric_content_unchanged": true,
+      "output_sha256": "90a4f139740c4b513e642b2458310b9d000e7afa648e53e780c0b072d02fecec",
+      "decompressed_sha256": "90a4f139740c4b513e642b2458310b9d000e7afa648e53e780c0b072d02fecec",
+      "bytes": 3898,
+      "numeric_content_unchanged": false,
       "selected_top_level_keys": [
         "episode",
         "episode_sha256",
@@ -1309,7 +1369,10 @@
         "status",
         "source"
       ],
-      "records": null
+      "records": null,
+      "previous_output_sha256": "a03199013524b5ae31a79837825a910cc12a86945ac379bf04d50453f0056162",
+      "derivation": "Shared normalized whole-label parsing of the original generated answers; exact-format compliance retained separately. All original likelihood estimates and intervals checked unchanged by vlm_context.native_analysis.",
+      "analysis_inputs": "data/analysis/native_manifest.json"
     },
     {
       "output": "data/paper/prompts/Qwen2-VL-2B_cifar4_standard_K0.json",
@@ -1366,10 +1429,10 @@
       "source_id": "OpenFlamingo_cifar4_standard_K0.json",
       "source_sha256": "ed13fd600647832caa38abae70e86ca7effdca72f37cdc08f08e92f2aa91ec25",
       "selected_payload_sha256": "0c137bcb5896560b054a016ae77b41a3e5cbacc4c7c6abd723ee40e18fb41269",
-      "output_sha256": "2b97b454143372c67e219fc15cfded684e0af4a30dd85f68602aa73f1c682300",
-      "decompressed_sha256": "2b97b454143372c67e219fc15cfded684e0af4a30dd85f68602aa73f1c682300",
-      "bytes": 3249,
-      "numeric_content_unchanged": true,
+      "output_sha256": "8b3196605f14f9a4f45387cfb5259657eb9d28f1786e545589154a3ee0d1ba61",
+      "decompressed_sha256": "8b3196605f14f9a4f45387cfb5259657eb9d28f1786e545589154a3ee0d1ba61",
+      "bytes": 3669,
+      "numeric_content_unchanged": false,
       "selected_top_level_keys": [
         "episode",
         "episode_sha256",
@@ -1378,7 +1441,10 @@
         "status",
         "source"
       ],
-      "records": null
+      "records": null,
+      "previous_output_sha256": "2b97b454143372c67e219fc15cfded684e0af4a30dd85f68602aa73f1c682300",
+      "derivation": "Shared normalized whole-label parsing of the original generated answers; exact-format compliance retained separately. All original likelihood estimates and intervals checked unchanged by vlm_context.native_analysis.",
+      "analysis_inputs": "data/analysis/native_manifest.json"
     },
     {
       "output": "data/paper/prompts/Qwen2-VL-2B_shapes4_episode_remap_K0.json",
@@ -1410,10 +1476,10 @@
       "source_id": "InternVL3-2B_shapes_standard_K16.json",
       "source_sha256": "16853e0a2e1924d6a3cbc5d1ef8ae40aac519ea03e34b6486c14f982af60182b",
       "selected_payload_sha256": "ea30625cb536fbd9d84e1180a2b98c22e111f2ef0c545293f02daa707f055065",
-      "output_sha256": "aead50b4979258bf13e5c708ea2b18e602ed7edfac70143daffd2a11aa800ef7",
-      "decompressed_sha256": "aead50b4979258bf13e5c708ea2b18e602ed7edfac70143daffd2a11aa800ef7",
-      "bytes": 37501,
-      "numeric_content_unchanged": true,
+      "output_sha256": "74c82a398522dbe2f9ab599be0dd15b1193b7884f9aa040d7c56d59032fe8ec4",
+      "decompressed_sha256": "74c82a398522dbe2f9ab599be0dd15b1193b7884f9aa040d7c56d59032fe8ec4",
+      "bytes": 37918,
+      "numeric_content_unchanged": false,
       "selected_top_level_keys": [
         "episode",
         "episode_sha256",
@@ -1422,17 +1488,20 @@
         "status",
         "source"
       ],
-      "records": null
+      "records": null,
+      "previous_output_sha256": "aead50b4979258bf13e5c708ea2b18e602ed7edfac70143daffd2a11aa800ef7",
+      "derivation": "Shared normalized whole-label parsing of the original generated answers; exact-format compliance retained separately. All original likelihood estimates and intervals checked unchanged by vlm_context.native_analysis.",
+      "analysis_inputs": "data/analysis/native_manifest.json"
     },
     {
       "output": "data/paper/prompts/OpenFlamingo_cifar4_remap_K0.json",
       "source_id": "OpenFlamingo_cifar4_remap_K0.json",
       "source_sha256": "e58cb6a93c20273b316a628aa3f9aed09337db0fe43b2513333f417e8219f279",
       "selected_payload_sha256": "5ecb2a30aaf45215f0134fd777bbaf1c5f6014e45ac9177afbc4222cfaa5c6bf",
-      "output_sha256": "6e447678ff244d6a2772bfb8b5390873a1fff5aa0180fa615cbc08bb4b8fb84a",
-      "decompressed_sha256": "6e447678ff244d6a2772bfb8b5390873a1fff5aa0180fa615cbc08bb4b8fb84a",
-      "bytes": 3350,
-      "numeric_content_unchanged": true,
+      "output_sha256": "62a88a98832256dd6f36fa88cd9f20e37f3247e34ddc8e6f2f986fe339bbf41b",
+      "decompressed_sha256": "62a88a98832256dd6f36fa88cd9f20e37f3247e34ddc8e6f2f986fe339bbf41b",
+      "bytes": 3770,
+      "numeric_content_unchanged": false,
       "selected_top_level_keys": [
         "episode",
         "episode_sha256",
@@ -1441,7 +1510,10 @@
         "status",
         "source"
       ],
-      "records": null
+      "records": null,
+      "previous_output_sha256": "6e447678ff244d6a2772bfb8b5390873a1fff5aa0180fa615cbc08bb4b8fb84a",
+      "derivation": "Shared normalized whole-label parsing of the original generated answers; exact-format compliance retained separately. All original likelihood estimates and intervals checked unchanged by vlm_context.native_analysis.",
+      "analysis_inputs": "data/analysis/native_manifest.json"
     },
     {
       "output": "data/protocols/datasets/shapes4_manifest.json.gz",
@@ -4608,6 +4680,136 @@
         "InternVL3-2B"
       ],
       "records": null
+    },
+    {
+      "output": "data/analysis/continual_raw_scores.json.gz",
+      "output_sha256": "4e36bac00a6a9aa3dce21eabbe4cec498478940c4ca3f595d4e1a189ec717247",
+      "bytes": 5195900,
+      "purpose": "Original compact numerical inputs or accompanying source/settings manifest for CPU reanalysis; no images, weights or credentials.",
+      "decompressed_sha256": "4ee2e24bf23a3a9b389f44536a149ae430efae5724546e0e17c8514befa7cea1"
+    },
+    {
+      "output": "data/analysis/continual_streams.json.gz",
+      "output_sha256": "28e073a183b39cbc5d9dacb0327754be451036dd70a71dc831626429c1bb51e2",
+      "bytes": 1444,
+      "purpose": "Original compact numerical inputs or accompanying source/settings manifest for CPU reanalysis; no images, weights or credentials.",
+      "decompressed_sha256": "c012e960bd6682cd61a6d0e746cbcf653e161f668f7c65bba471e9599428c3d5"
+    },
+    {
+      "output": "data/analysis/controller_raw_scores.json.gz",
+      "output_sha256": "7907a82f5cec1847a6b1f8d83ae5a450689887a1ea9dd4a7b81846aca55749ff",
+      "bytes": 4265083,
+      "purpose": "Original compact numerical inputs or accompanying source/settings manifest for CPU reanalysis; no images, weights or credentials.",
+      "decompressed_sha256": "4c6f142368c53f4d2028c72285df5e7a0c31d69af52cdbe4235215a26878e1fc"
+    },
+    {
+      "output": "data/analysis/controller_streams.json.gz",
+      "output_sha256": "acaa4bff80fea3b52d13b20a89d0576b8ed4088b79fe72d61efbd635ef7f2cc3",
+      "bytes": 1493,
+      "purpose": "Original compact numerical inputs or accompanying source/settings manifest for CPU reanalysis; no images, weights or credentials.",
+      "decompressed_sha256": "3399d644ab4201273b92592c6826c8c18a321db796c2f0d792083757c797c94e"
+    },
+    {
+      "output": "data/analysis/core_contrasts.json.gz",
+      "output_sha256": "992d67bf79bef5a0c25aca1118674f962b89cad4af429eeec73e6cb831f672fa",
+      "bytes": 4140,
+      "purpose": "Original compact numerical inputs or accompanying source/settings manifest for CPU reanalysis; no images, weights or credentials.",
+      "decompressed_sha256": "3919677b3a324305cc7917a752594e7e9d8b212c1b7353a8a612813703f4a366"
+    },
+    {
+      "output": "data/analysis/core_image_reference.json.gz",
+      "output_sha256": "1a88f1d74cafd7519b56ffe2333c71e8d908648efb6c9ca968d24a6a8fb10ff7",
+      "bytes": 19231,
+      "purpose": "Original compact numerical inputs or accompanying source/settings manifest for CPU reanalysis; no images, weights or credentials.",
+      "decompressed_sha256": "6c889041140d80c93f7b1a07c9b32bfcfd93fe99ad776c44c8915690a2af56fe"
+    },
+    {
+      "output": "data/analysis/core_raw_scores.json.gz",
+      "output_sha256": "b4b1609c6992972712959472ab7ecb808c83bfaab8ea032dac124fe1bd0fc52d",
+      "bytes": 10176747,
+      "purpose": "Original compact numerical inputs or accompanying source/settings manifest for CPU reanalysis; no images, weights or credentials.",
+      "decompressed_sha256": "abd57d365539058cbb663cc3fb8022685a302ac25acdba9e0dceefdd57abfdcb"
+    },
+    {
+      "output": "data/analysis/intervention_manifest.json",
+      "output_sha256": "d71fe8eba178526841f67d828d76ecd3c956f11a5d4b3e8687f038e55ab2c403",
+      "bytes": 891,
+      "purpose": "Original compact numerical inputs or accompanying source/settings manifest for CPU reanalysis; no images, weights or credentials."
+    },
+    {
+      "output": "data/analysis/intervention_raw_scores.json.gz",
+      "output_sha256": "691f0201d2128dc985a3140b562dfaec25ed8160680ea4711223a8a8d1ca5aae",
+      "bytes": 7584040,
+      "purpose": "Original compact numerical inputs or accompanying source/settings manifest for CPU reanalysis; no images, weights or credentials.",
+      "decompressed_sha256": "8f8c6f9620b01aadd52223c02263c08ca98207fa061b728d97133dfc0c289ee9"
+    },
+    {
+      "output": "data/analysis/native_manifest.json",
+      "output_sha256": "c93f60bc6a47b3317394726af129e6387f1cf83f0f319062362b45f1493f7bba",
+      "bytes": 5049,
+      "purpose": "Original compact numerical inputs or accompanying source/settings manifest for CPU reanalysis; no images, weights or credentials."
+    },
+    {
+      "output": "data/analysis/native_records.json.gz",
+      "output_sha256": "2fd8102af51223002d2342949f67a1ca0036b7b5429d8a206de9e3244f7593d1",
+      "bytes": 1918310,
+      "purpose": "Original compact numerical inputs or accompanying source/settings manifest for CPU reanalysis; no images, weights or credentials.",
+      "decompressed_sha256": "6f7781ab26bd64e910d6e3ba0ef97b6967c6900755d5f3db68283d760579c7bd"
+    },
+    {
+      "output": "data/analysis/paired_families.json.gz",
+      "output_sha256": "a52844bc8ebccb9c72ac95284410726af5e60f1b1fe24ce172e628bace6eb340",
+      "bytes": 291720,
+      "purpose": "Original compact numerical inputs or accompanying source/settings manifest for CPU reanalysis; no images, weights or credentials.",
+      "decompressed_sha256": "d954ed89fa21a9347a97db323ae64ec751723bda7448302f5909ebfdd3fbc76f"
+    },
+    {
+      "output": "data/analysis/paired_family_destinations.json.gz",
+      "output_sha256": "49ce50d3d6800edbecda91ce0e4ab0b4e43b0e8ed08dd66e2e72691f56d7b178",
+      "bytes": 699,
+      "purpose": "Original compact numerical inputs or accompanying source/settings manifest for CPU reanalysis; no images, weights or credentials.",
+      "decompressed_sha256": "069d3441115fff781b466aa590d72be13c905ac09ff8e88a169b677e5c979aa1"
+    },
+    {
+      "output": "data/analysis/position_manifest.json",
+      "output_sha256": "eb4e5686ad0a3abf8283553d166d509117e1babb8cc7bbf106756ad8beaff061",
+      "bytes": 430,
+      "purpose": "Original compact numerical inputs or accompanying source/settings manifest for CPU reanalysis; no images, weights or credentials."
+    },
+    {
+      "output": "data/analysis/position_raw.json.gz",
+      "output_sha256": "a5bd0b7502744808f5f049671c71128a2d7f3ad1bca4324a8218596ec3c2a192",
+      "bytes": 273847,
+      "purpose": "Original compact numerical inputs or accompanying source/settings manifest for CPU reanalysis; no images, weights or credentials.",
+      "decompressed_sha256": "c2a0a93ee67bcdda7b9a81266a46845f21dc0893339e71e050fd5c9bcc2834f1"
+    },
+    {
+      "output": "data/analysis/q05_manifest.json",
+      "output_sha256": "5433229d2ab46758344f3363398cc3e43038d48ab16b15c11dd3e1ecf4b23cb4",
+      "bytes": 764,
+      "purpose": "Original compact numerical inputs or accompanying source/settings manifest for CPU reanalysis; no images, weights or credentials."
+    },
+    {
+      "output": "data/analysis/q05_raw.jsonl.gz",
+      "output_sha256": "1fdb3e8992d850601091f40cb07e164f11359d9c70bccc5b83781170756e1675",
+      "bytes": 13699133,
+      "purpose": "Original compact numerical inputs or accompanying source/settings manifest for CPU reanalysis; no images, weights or credentials.",
+      "decompressed_sha256": "ec9f55839fe7b7cdf8027c9f747e8e93c5c8193e62f5d8fb5a438b652205a626"
+    },
+    {
+      "output": "data/analysis/q11_methods.json.gz",
+      "output_sha256": "cea69a2f997d492e1c070d55a53717deeb7fd0a0050e7845dd96906f323db8bc",
+      "bytes": 150,
+      "purpose": "Original compact numerical inputs or accompanying source/settings manifest for CPU reanalysis; no images, weights or credentials.",
+      "decompressed_sha256": "671be086bc73a7cf61edb3aa3319d9b521143a0342fafa65b8e196034e2a397c"
+    },
+    {
+      "output": "data/analysis/q11_outcomes.json.gz",
+      "output_sha256": "43702cda02e8432576b4d810a4698ed72e9f5fb5ff52a3b482987b1b8adcb9b5",
+      "bytes": 654503,
+      "purpose": "Original compact numerical inputs or accompanying source/settings manifest for CPU reanalysis; no images, weights or credentials.",
+      "decompressed_sha256": "f752619296929af12287ec58d73a390306f40c269f6e91c06fa52bc00231a355"
     }
-  ]
+  ],
+  "updated": "2026-11-20"
 }

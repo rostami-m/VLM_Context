@@ -1,0 +1,119 @@
+{
+  "bootstrap": {
+    "draws": 10000,
+    "image_order": "first occurrence in archived evaluation schedule",
+    "quantiles": "sorted draw values at floor(0.025 * draws), floor(0.975 * draws)",
+    "sampling_unit": "query image; contexts averaged within image",
+    "seed": 20261106,
+    "stratified": false
+  },
+  "compressed_sha256": "2fd8102af51223002d2342949f67a1ca0036b7b5429d8a206de9e3244f7593d1",
+  "decompressed_sha256": "6f7781ab26bd64e910d6e3ba0ef97b6967c6900755d5f3db68283d760579c7bd",
+  "exact_format": "Whole label after outer whitespace removal; case and punctuation sensitive; distinct diagnostic.",
+  "methods": {
+    "2460aed0cbd8aec9076b": {
+      "analysis_key": "IDEFICS2 analysis",
+      "arm": "frozen",
+      "checkpoint_descriptors": {},
+      "model": "IDEFICS2",
+      "model_id": "HuggingFaceM4/idefics2-8b",
+      "revision": "2c42686c57fe21cf0348c9ce1077d094b72e7698",
+      "study": "native_families"
+    },
+    "5bd9581570860ceac1f1": {
+      "analysis_key": "D14CPU11_OpenGVLab__InternVL3-2B-hf_images",
+      "arm": "frozen",
+      "checkpoint_descriptors": {},
+      "model": "InternVL3-2B",
+      "model_id": "OpenGVLab/InternVL3-2B-hf",
+      "revision": "cb57a075cb75a2e6d1b668b128d48bb00ae321d2",
+      "study": "replication"
+    },
+    "5bf436501a6ecd7d5d4d": {
+      "analysis_key": "Mantis analysis",
+      "arm": "frozen",
+      "checkpoint_descriptors": {},
+      "model": "Mantis",
+      "model_id": "TIGER-Lab/Mantis-8B-Idefics2",
+      "revision": "a1ae928477b92a51b14d619b0932740cb122115b",
+      "study": "native_families"
+    },
+    "652f904838ae42cea583": {
+      "analysis_key": "D14CPU11_Qwen__Qwen2_5-VL-3B-Instruct_images",
+      "arm": "late",
+      "checkpoint_descriptors": {
+        "0": "285ff20b805ab2bfe6883253d66f092abd3bb6e07b276630c61d9cde14b9eb6a",
+        "1": "ba12e4308e3c0992dad50d3bbe79bc572daffa9d49ebde76ce4466464cffb7bc",
+        "2": "5c30203fc142d7b1b223bfe9eb65c75b3373d61a2de453411683c2f122776e46"
+      },
+      "model": "Qwen2.5-VL-3B",
+      "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+      "revision": "66285546d2b821cf421d4f5eb2576359d3770cd3",
+      "study": "replication"
+    },
+    "69bd9b74a7cb566865e3": {
+      "analysis_key": "D14CPU11_Qwen__Qwen2_5-VL-3B-Instruct_images",
+      "arm": "connector",
+      "checkpoint_descriptors": {
+        "0": "766986483fbef3aa02cf8f40229879fc844bb5ca4841d02af6d580d51b0372d5",
+        "1": "c81947a5dafdfd721ea533481b231f0bac16ffefd37dd2e8c68535f289982013",
+        "2": "b2ce492d78d9ea751254f1f9e006bffbf0348ab4d3aa964bafbad2c3b86ca9ee"
+      },
+      "model": "Qwen2.5-VL-3B",
+      "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+      "revision": "66285546d2b821cf421d4f5eb2576359d3770cd3",
+      "study": "replication"
+    },
+    "7a8551b0fe08db00399f": {
+      "analysis_key": "D14CPU11_OpenGVLab__InternVL3-2B-hf_images",
+      "arm": "connector",
+      "checkpoint_descriptors": {
+        "0": "723ed5625afb27739dac06ecadd12908f4f3c804a46ac8de532e45611cfea54a",
+        "1": "8240129eabf9e9679be8cce1081d0394c5db7f458c663b2a48dfb714453122b5",
+        "2": "4c7aa821bc8099d1782e5f5462eb95bf0d3b3c24d9d6a8f23410c9948f731666"
+      },
+      "model": "InternVL3-2B",
+      "model_id": "OpenGVLab/InternVL3-2B-hf",
+      "revision": "cb57a075cb75a2e6d1b668b128d48bb00ae321d2",
+      "study": "replication"
+    },
+    "ab1d38aa214770b2ea8f": {
+      "analysis_key": "D14CPU11_OpenGVLab__InternVL3-2B-hf_images",
+      "arm": "late",
+      "checkpoint_descriptors": {
+        "0": "53671d1c726a450666190cdc330d5bfd869c76e0306670c53f5fe959adee0720",
+        "1": "0b8e0e0b2d35b4e83d2dcd3a6fa9b5a4ab36ce9e9abeb1ff34e6565ca63e129b",
+        "2": "d196b0f706034c2dced6c3f175f58f31567d6bfc38468f48276ab488f9e0299d"
+      },
+      "model": "InternVL3-2B",
+      "model_id": "OpenGVLab/InternVL3-2B-hf",
+      "revision": "cb57a075cb75a2e6d1b668b128d48bb00ae321d2",
+      "study": "replication"
+    },
+    "e6aa0443cceca6c43cba": {
+      "analysis_key": "OpenFlamingo analysis",
+      "arm": "frozen",
+      "checkpoint_descriptors": {},
+      "model": "OpenFlamingo",
+      "model_id": "openflamingo/OpenFlamingo-4B-vitl-rpj3b",
+      "revision": "df8d3f7e75bcf891ce2fbf5253a12f524692d9c2",
+      "study": "native_families"
+    },
+    "ef0dfdbfaca35bc697fa": {
+      "analysis_key": "D14CPU11_Qwen__Qwen2_5-VL-3B-Instruct_images",
+      "arm": "frozen",
+      "checkpoint_descriptors": {},
+      "model": "Qwen2.5-VL-3B",
+      "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+      "revision": "66285546d2b821cf421d4f5eb2576359d3770cd3",
+      "study": "replication"
+    }
+  },
+  "parser": "vlm_context.protocol.parse_diagnostics; normalized whole label and optional trailing .!?",
+  "records": 6480,
+  "records_path": "data/analysis/native_records.json.gz",
+  "sampling": "All 36 reported cells; three contexts per fixed image. No output-dependent selection.",
+  "schema_version": 1,
+  "scope": "Saved model outputs and token probabilities; no images, weights, private paths or credentials.",
+  "source_record_hashes_verified": true
+}

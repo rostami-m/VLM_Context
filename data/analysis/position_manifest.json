@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "records": 1440,
+  "output": "data/analysis/position_raw.json.gz",
+  "output_sha256": "a5bd0b7502744808f5f049671c71128a2d7f3ad1bca4324a8218596ec3c2a192",
+  "decompressed_sha256": "c2a0a93ee67bcdda7b9a81266a46845f21dc0893339e71e050fd5c9bcc2834f1",
+  "bytes": 273847,
+  "source_summary_sha256": "079d0372be2c9baa8d1e057544df5f3745e76c677bc9b76d9c04417a60681057",
+  "source_record_hashes_verified": true
+}

@@ -2,7 +2,8 @@
 import unittest
 from types import SimpleNamespace
 from vlm_context.io import read_json,source_path
-from vlm_context.native_families import boundary,strict_parse,historical_parse
+from vlm_context.native_families import boundary,strict_parse,historical_parse,exact_format_parse
+from vlm_context.protocol import parse_diagnostics
 from vlm_context.open_tasks import vqa_score,legacy_image_id,render_rule
 from vlm_context.experiments.vqa import scheduled,summarize
 
@@ -21,6 +22,19 @@ class NativeProtocols(unittest.TestCase):
         self.assertIsNone(strict_parse('an airplane',labels))
         self.assertEqual(historical_parse('an airplane',labels),1)
         self.assertEqual(strict_parse(' airplane\n',labels),1)
+
+    def test_native_strict_grammar_is_shared_across_families(self):
+        labels = ['bird', 'red fox', 'cat', 'automobile']
+        for text, expected in [('Bird', 0), ('Automobile.', 3),
+                               (' RED   FOX!?\n', 1), ('bird or cat', None),
+                               ('The answer is bird.', None), ('not bird', None),
+                               ('bird, red fox, cat, automobile', None)]:
+            self.assertEqual(strict_parse(text, labels), expected)
+            self.assertEqual(strict_parse(text, labels),
+                             parse_diagnostics(text, labels)['prediction'])
+        self.assertIsNone(exact_format_parse('Bird', labels))
+        self.assertIsNone(exact_format_parse('bird.', labels))
+        self.assertEqual(exact_format_parse(' bird\n', labels), 0)
 
     def test_official_vqa_soft_credit(self):
         self.assertAlmostEqual(vqa_score('yes',['yes']*3+['no']*7),.9)

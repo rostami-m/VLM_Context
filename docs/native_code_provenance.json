@@ -19,29 +19,35 @@
     "historical_input_archive/vqa_confirmatory.py": "15c71b56c24304cc8650300b15a92abc6b46f7ff62e49878b5b858cf5203e211"
   },
   "public_file_sha256": {
-    "vlm_context/native_families.py": "56e098e9def637d0cac42520245d1de0d9ef3de1fd61621e5b9f6bcfef5458c7",
+    "vlm_context/native_families.py": "808394741cf1836671ae6e42faffe72b4b3996b7715bcdd2633bb1c22c61d265",
     "vlm_context/family_training.py": "c4587df7fcd3e71d28813a17265425b59f6ed4a49c3a1f8f4483f977eb99ffb5",
     "vlm_context/open_tasks.py": "0a5625ae72ceff152cfce64a286ba2d1b807fa6a2fd2003a2fc3eb9f0355dbf3",
     "vlm_context/native_checkpoints.py": "8aeea91ad1b1fe64d84b8981cc593a93a51c063e507c40be3eb83fcf4014a10f",
-    "vlm_context/experiments/native_probes.py": "7b838764649a3e50e80b0b99ff12f9e4971aa3e37e8e33bb8368faad52aa616d",
+    "vlm_context/experiments/native_probes.py": "2501fd18243645958fdfd261514e329b9967fc47c76375581f00d8f515c93e2c",
     "vlm_context/experiments/replication.py": "e247bd78d1def14e58b64cf573f20edeb0300a69b07bd4e13898e41dd039a9e3",
     "vlm_context/experiments/vqa.py": "11a2bf47f68da759be5ea1f7a48b445a2fe99252b0947b00d6529b2e4841930b",
-    "vlm_context/experiments/different_rule.py": "263d3611eace4d6d054bd6c3b943b785e13d6a81df73124bef0024fc1d9c2ae4"
+    "vlm_context/experiments/different_rule.py": "263d3611eace4d6d054bd6c3b943b785e13d6a81df73124bef0024fc1d9c2ae4",
+    "vlm_context/native_analysis.py": "eed3f1a572783591fc337ab38998bb25e1278b2625069ea49dd99fba1ab53452"
   },
   "transformations": [
     "Removed project-root paths, campaign gates, host locks, execution deadlines and approval workflows.",
-    "Preserved native processor/scorer, complete label plus terminator, strict/historical parsers, exact IDEFICS2 token-prefix handling, official CLIP routing and same-storage aliases, GPTNeoX integer position compatibility, Q13 targets/optimizer/loss, VQA normalization and exact Q11 query-chunk attention.",
+    "Preserved native processor/scorer, complete label plus terminator, historical substring diagnostic, exact IDEFICS2 token-prefix handling, official CLIP routing and same-storage aliases, GPTNeoX integer position compatibility, Q13 targets/optimizer/loss, VQA normalization and exact Q11 query-chunk attention.",
     "Portable orchestration consumes frozen schedules. Explicit model directories are checked against recorded file hashes and native Transformers versions.",
     "Q13 seeding occurs before native model construction; displayed-option candidate order and the mixed schedule are retained. Frozen-base hashes and fresh checkpoint reload are validated. Checkpoint evaluation rejects wrong model/arm/seed/source task, incomplete or modified fits, and smoke fits outside explicit smoke evaluation; Q13 source metadata are hash-bound by its completion receipt.",
-    "Q11 reconstructs frozen rule scenes and acquires pinned VQA/retention images using source IDs and byte hashes. VQAv2 uses the datasets Image decoder on the recorded parquet image column; no new query selection occurs."
+    "Q11 reconstructs frozen rule scenes and acquires pinned VQA/retention images using source IDs and byte hashes. VQAv2 uses the datasets Image decoder on the recorded parquet image column; no new query selection occurs.",
+    "Unified native classification generation parsing with the main normalized whole-label grammar. Case/punctuation-sensitive exact-format compliance remains a distinct diagnostic. All 6,480 saved family and replication records are released with complete candidate token log probabilities; the CPU reducer reconstructs all 36 published cells, image intervals and fitted/context-seed contrasts before attaching the new diagnostics."
   ],
   "validation": {
     "model_execution_during_native_release_preparation": false,
-    "native_protocol_tests": 12,
+    "native_protocol_tests": 19,
     "rule_images_exact_png_hash": 816,
     "vqav2_images_exact_png_hash": 66,
     "recorded_vqa_parquet_shards_verified": 2,
     "full_native_model_grid_rerun": false,
-    "limitations": "CPU checks and input reconstruction do not establish complete native model execution parity on a new backend. New fits may differ numerically across hardware."
+    "limitations": "CPU checks and input reconstruction do not establish complete native model execution parity on a new backend. New fits may differ numerically across hardware.",
+    "native_saved_records_reduced": 6480,
+    "native_cells_reduced": 36,
+    "original_likelihood_means_intervals_and_seed_contrasts_match": true,
+    "native_record_checkpoint_seed_bindings_verified": 6480
   }
 }

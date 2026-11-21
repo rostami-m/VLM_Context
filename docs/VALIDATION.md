@@ -1,15 +1,23 @@
 # Release validation
 
-Checks completed on 2026-11-19:
+Checks completed for the CPU analysis update (2026-11-20):
 
-- All 47 CPU tests passed, covering answer/end-token scoring, strict parsing, calibration, frozen schedules, target budgets, dataset-role separation, policy selection, continual replay access, controller triggers, and checkpoint lineage.
-- All package modules compile and import. All 23 experiment configurations resolve to callable runners.
-- All 117 released evidence/protocol files match their recorded output checksums; compressed payloads also match their decompressed checksums.
-- All 57,600 Q05 per-image records reproduce the 2,880 archived scoring/confusion cells exactly. The 747 absolute core replicate metrics reproduce their 249 aggregate means.
-- All 17 corresponding manuscript table comparisons match at printed precision, covering 129 printed numerical rows. Both curve figures regenerate; the core figure includes the actual individual-replicate traces.
+- All 68 tests passed, with no skips. They cover complete-answer/end-token scoring, the common normalized parser, calibration refitting inside resamples, paired image/context coverage, source-checkpoint binding, frozen schedules, target budgets, dataset-role separation, policy selection, continual replay access and controller triggers.
+- The complete `regenerate` command passed, producing 21 numerical table groups and both curve figures. All 17 corresponding manuscript table assets plus the main-text native-model table agree at printed precision: 132 rows and 583 numerical values. Both the manuscript and response letter compile; all 60 reviewer comments are preserved and the 62 manuscript-reference bindings resolve.
+- All 136 released evidence/protocol files match their recorded checksums, including decompressed payloads. The 19 new analysis artifacts were also checked for private paths, credentials, operational metadata and broken logical references.
+- All 57,600 Q05 predictions are reconstructed from original generated answers and candidate token scores, reproducing all 2,880 scoring/confusion cells. All 1,440 position records reproduce their 54 cells and paired contrasts.
+- The 6,480 native-family/replication records reproduce every original likelihood mean and interval. The shared parser updates generation diagnostics in ten cells; exact-string compliance remains a separate diagnostic. This distinction is carried through the released summaries, manuscript tables and response letter.
+- Core estimates and intervals are recomputed from 59,760 records: 249 aggregate cells, 615 paired image contrasts and the coupled replicate summaries. Open-task estimates and intervals are reconstructed from 3,200 saved task answers and candidate scores.
+- All 72 baseline/intervention comparison families reproduce their 4,472 numerical reference fields, including calibration refits in bootstrap draws. Complete-candidate traces validate 100 baseline generation-diagnostic cells; each retains exactly 80 queries and three contexts. Raw predictions and calibration logits are checked against the elementary outcomes used for resampling.
+- All 42,578 baseline/intervention candidate traces retain the original candidate order and source hashes. For 5,778 frozen/CAMA records that stored token IDs, the generated text is decoded with the pinned tokenizer; the IDs, decoding settings and tokenizer provenance are released. Calibration and nearest-neighbor methods are excluded from generated-answer diagnostics.
+- Continual-learning AA/BWT and all six image intervals are reconstructed from 43,200 predictions across 36 streams. Controller estimates, paired policy differences, event counts and recorded costs are reconstructed from 32,400 predictions across nine streams.
+
+The earlier release validation (2026-11-19) also completed the following model/data checks; this CPU analysis update does not repeat model fitting:
+
+- All 23 experiment configurations resolved to callable runners, and package modules compiled and imported.
 - Exact reconstruction was checked for 1,304 Shapes images, 2,360 continual-learning CIFAR-100 images, 816 different-rule images, and 66 required VQAv2 images. Decoded pixels and, where specified by the protocol, encoded PNG hashes match.
 - A local MPS check loaded the pinned Qwen2-VL-2B snapshot, ran frozen inference, completed two connector-adapter updates, saved/reloaded the adapter, and evaluated K=0 standard and K=16 remapped episodes with independent full-forward, stepwise and native-generation checks. Complete-answer loss, frozen-base integrity and checkpoint checks passed. These are explicitly marked technical smoke runs.
 
-These checks validate the release interfaces and deterministic reconstruction of the saved evidence. They do **not** constitute a fresh run of the full fitting/model grid. The full results remain those of the archived experiments; hardware-dependent new training or inference may differ. Saved resampling intervals are reproduced from the released analyses rather than regenerated from unavailable raw model outputs.
+These checks validate the release interfaces and deterministic reconstruction of the retained evidence. They do **not** constitute a fresh run of the full fitting/model grid. The results remain those of the archived experiments; hardware-dependent new training or inference may differ. The new CPU reducers regenerate resampling intervals from per-query records with the original clustering, RNG settings and calibration refits. Recorded timings and protocol descriptions remain archived measurements and metadata. [ANALYSIS.md](ANALYSIS.md) specifies the source level and estimator for each study.
 
 Install from a source checkout with `python -m pip install -e '.[analysis]'`, run `python -m unittest discover -s tests -v`, then `python -m vlm_context regenerate --output runs/paper`. The CPU workflow performs these checks in GitHub Actions. Model runs require the separately documented environments, data and weights.

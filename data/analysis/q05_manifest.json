@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "records": 57600,
+  "output": "data/analysis/q05_raw.jsonl.gz",
+  "output_sha256": "1fdb3e8992d850601091f40cb07e164f11359d9c70bccc5b83781170756e1675",
+  "decompressed_sha256": "ec9f55839fe7b7cdf8027c9f747e8e93c5c8193e62f5d8fb5a438b652205a626",
+  "bytes": 13699133,
+  "source_summary_sha256": "912bb1811a6b56bdec274d6bb3e3aad0df43e4a53205f84f66d7d8e6ef36dbe9",
+  "source_record_hashes_verified": true,
+  "grouping_gold_support_options_and_episode_hash_verified": true,
+  "scope": "Original complete candidate token log probabilities, answer token IDs and generations; no model inference or changes to recorded numerical values. Each source record is identified by SHA256; query/support identifiers link to the public frozen schedules."
+}

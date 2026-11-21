@@ -1,11 +1,13 @@
 """Native family scoring from the accepted experiments.
 
-Candidate scoring, processor templates, strict parsing, and prefix validation are
-preserved. Model paths are supplied by the caller; campaign admission is absent.
+Candidate scoring, processor templates, and prefix validation are preserved.
+Generated class answers use the shared normalized strict grammar; exact-format
+compliance is separate. Model paths are supplied by the caller.
 """
 from __future__ import annotations
 import contextlib, copy, hashlib, importlib.metadata, math, pathlib, re, sys, time, types
 from .io import read_json as read, sha256 as sha, require as need
+from .protocol import parse_diagnostics
 
 def digest(value):
     import json
@@ -34,7 +36,12 @@ def boundary(prefix,full,label,decode,eos_ids):
             'decoded_label_span':answer,'trailing_template_token_ids':tail[stop+1:]}
 
 def strict_parse(text,labels):
-    text=text.strip()
+    """Use the same whole-label grammar as the main Qwen evaluation."""
+    return parse_diagnostics(text, labels)['prediction']
+
+def exact_format_parse(text, labels):
+    """Case/punctuation-sensitive format compliance, separate from correctness."""
+    text = text.strip()
     return labels.index(text) if text in labels else None
 
 def historical_parse(text,labels):
@@ -132,6 +139,7 @@ class HFNative:
                 'native_input_shapes':{k:list(v.shape) for k,v in base.items()},'context_limit':self.context_limit,
                 'candidates':scores,'sum_prediction':labels[best],'mean_prediction':labels[mean],
                 'greedy_text':decoded,'greedy_token_ids':ids,'strict_prediction_index':strict_parse(decoded,labels),
+                'exact_format_prediction_index':exact_format_parse(decoded,labels),
                 'historical_prediction_index':historical_parse(decoded,labels),
                 'causal_checks':checks,'elapsed_seconds':time.monotonic()-start}
     def generate(self,messages,images,max_new_tokens=16):
@@ -307,7 +315,7 @@ class FlamingoNative:
                     checks.append({'label':label,'max_abs_logp_error':max(errors),'token_count':len(ts),'prefix_token_log_probabilities':prefix_values})
             out=self.model.generate(**base,max_new_tokens=16,num_beams=1,do_sample=False)
         ids=out[0,len(prefix):].tolist();text=self.tokenizer.decode(ids,skip_special_tokens=True)
-        return {'prompt':prompt,'prompt_token_ids':prefix,'native_input_shapes':{k:list(v.shape) for k,v in base.items()},'context_limit':self.context_limit,'candidates':rows,'sum_prediction':max(rows,key=lambda r:r['sum_logp'])['label'],'mean_prediction':max(rows,key=lambda r:r['mean_logp'])['label'],'greedy_text':text,'greedy_token_ids':ids,'strict_prediction_index':strict_parse(text,labels),'historical_prediction_index':historical_parse(text,labels),'causal_checks':checks,'elapsed_seconds':time.monotonic()-start}
+        return {'prompt':prompt,'prompt_token_ids':prefix,'native_input_shapes':{k:list(v.shape) for k,v in base.items()},'context_limit':self.context_limit,'candidates':rows,'sum_prediction':max(rows,key=lambda r:r['sum_logp'])['label'],'mean_prediction':max(rows,key=lambda r:r['mean_logp'])['label'],'greedy_text':text,'greedy_token_ids':ids,'strict_prediction_index':strict_parse(text,labels),'exact_format_prediction_index':exact_format_parse(text,labels),'historical_prediction_index':historical_parse(text,labels),'causal_checks':checks,'elapsed_seconds':time.monotonic()-start}
 
 def position_ids_cpu(attention_mask, past_key_values):
     # Same integer algorithm as transformers 4.28.1 GPTNeoX, on CPU only.

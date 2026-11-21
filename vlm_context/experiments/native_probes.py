@@ -35,10 +35,17 @@ def evaluate(engine,rows,loader,out,*,smoke=False):
         gold=e['label_space'][e['query']['class_id']]
         correct=result['sum_prediction']==gold
         write_json(out/'records'/f'{n:06d}.json',{'episode':e,'result':result,'correct':correct,'smoke_only':smoke})
-        key=(e['condition'],e['k']);groups.setdefault(key,[0,0,0,0])
-        a=groups[key];a[0]+=correct;a[1]+=1;a[2]+=result['strict_prediction_index'] is None;a[3]+=result['sum_prediction']!=result['mean_prediction']
+        key=(e['condition'],e['k']);groups.setdefault(key,[0,0,0,0,0,0,0])
+        strict=result['strict_prediction_index'];exact=result['exact_format_prediction_index']
+        a=groups[key];a[0]+=correct;a[1]+=1;a[2]+=strict is None;a[3]+=result['sum_prediction']!=result['mean_prediction']
+        a[4]+=strict is not None and e['displayed_options'][strict]==gold
+        a[5]+=exact is None
+        a[6]+=exact is not None and e['displayed_options'][exact]==gold
         if n%20==0:print(f'evaluated {n+1}/{len(rows)}',flush=True)
-    return {'cells':[{'condition':c,'k':k,'n':a[1],'accuracy':a[0]/a[1],'strict_invalid':a[2]/a[1],'sum_mean_disagreement':a[3]/a[1]} for(c,k),a in sorted(groups.items())]}
+    return {'cells':[{'condition':c,'k':k,'n':a[1],'accuracy':a[0]/a[1],'strict_invalid':a[2]/a[1],'sum_mean_disagreement':a[3]/a[1],
+                     'strict_generation_accuracy':a[4]/a[1],'exact_format_invalid':a[5]/a[1],
+                     'exact_format_generation_accuracy':a[6]/a[1]} for(c,k),a in sorted(groups.items())],
+            'generation_parser':'shared normalized whole-label grammar; exact format is a separate case/punctuation-sensitive diagnostic'}
 
 
 def run(config,args):

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "records": 42578,
+  "source_receipt_and_candidate_order_checks": 42578,
+  "decoded_saved_token_id_records": 5778,
+  "tokenizer": {
+    "repository": "Qwen/Qwen2-VL-2B-Instruct",
+    "revision": "895c3a49bc3fa70a340399125c650a463535e71c",
+    "file": "tokenizer.json",
+    "sha256": "cb63a0a23eef3d5b01063a9880a1925a65aaf4d1591d519910ee3527852950a0"
+  },
+  "decoding": {
+    "library": "tokenizers",
+    "function": "Tokenizer.decode",
+    "skip_special_tokens": true,
+    "clean_up_tokenization_spaces": "not applied; tokenizers library decoder only"
+  },
+  "raw_file": "data/analysis/intervention_raw_scores.json.gz",
+  "raw_sha256": "691f0201d2128dc985a3140b562dfaec25ed8160680ea4711223a8a8d1ca5aae",
+  "candidate_order": "Every original candidate label list equals the original episode label_space; exported token spans match corresponding original records."
+}
